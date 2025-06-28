@@ -1,0 +1,144 @@
+/* src/sections/KeunggulanSection.module.css (FINAL DENGAN 3 TAHAP RESPONSIVE) */
+
+.section {
+  position: relative;
+  padding: 0 100px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.backgroundOverlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.frame {
+  position: relative;
+  z-index: 2;
+  background-color: #282828;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.titleContainer {
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #FAFAFA;
+}
+
+.mainTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+  color: #E0E0E0;
+}
+
+/* --- Tampilan Default untuk Desktop (> 1024px) --- */
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 0;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  height: 480px;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+ }
+
+.card:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2; /* Di atas gambar */
+}
+
+.cardText {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  color: #fff;
+  z-index: 3; /* Di atas overlay */
+}
+
+.cardTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  max-width: 260px;
+}
+
+.cardDescription {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* --- TAHAP 1: Tampilan Tablet (<= 1024px) --- */
+@media (max-width: 1024px) {
+  .section {
+    background-image: none !important;
+    background-color: #282828;
+    padding: 0 0;
+  }
+  
+  .frame {
+    max-width: 100%;
+    margin: 0;
+    padding: 5rem 3rem;
+  }
+  /* Di sini, .gridContainer MASIH menggunakan 'repeat(3, 1fr)' dari atas, jadi tetap horizontal */
+}
+
+/* --- TAHAP 2: Tampilan Mobile (<= 767px) --- */
+@media (max-width: 767px) {
+    .frame {
+        padding: 3rem;
+    }
+
+    /* BARU DI SINI kita ubah grid menjadi 1 kolom (vertikal) */
+    .gridContainer {
+      grid-template-columns: 1fr;
+      /* gap: 0; Dihilangkan agar rapat sesuai permintaan "berdempetan kebawah" */
+    }
+
+    /* Dan ubah bentuk kartu menjadi persegi panjang */
+    .card {
+        height: 280px;
+    }
+
+    .cardTitle {
+        font-size: 20px;
+    }
+
+    .cardDescription {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,31 @@
+/* src/components/KeunggulanCard.module.css (VERSI BARU - WARNA SOLID) */
+
+.card {
+  width: 365px;
+  height: 300px;
+  background-color: #ECEDF9; /* Warna latar baru sesuai permintaan */
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Membuat konten terpusat secara vertikal */
+  text-align: center; /* Membuat konten terpusat secara horizontal */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0 0 1.5rem 0;
+  color: #2D2C37; /* Warna teks diubah agar kontras */
+  padding: 0 20px;
+}
+
+.description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #2D2C37; /* Warna teks diubah agar kontras */
+}

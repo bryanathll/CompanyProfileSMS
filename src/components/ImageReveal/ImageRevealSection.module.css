@@ -1,0 +1,69 @@
+/* src/sections/ImageRevealSection.module.css (VERSI FINAL - TANPA PIN/STICKY) */
+
+.section {
+  /* Beri tinggi agar ada ruang untuk scroll dan animasi */
+  height: 100vh;
+  position: relative;
+  overflow: hidden; /* Sembunyikan gambar yang keluar batas */
+  background-color: #FAFAFA;
+}
+
+.image {
+  /* Gambar mengisi seluruh section dan diposisikan di tengah */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gradientOverlay {
+  position: absolute;
+  /* bottom: 0; */
+  /* left: 0; */
+  width: 100%;
+  height: 100%; /* Tinggi gradien, bisa disesuaikan */
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2; /* Di atas gambar */
+  pointer-events: none; /* Agar tidak bisa di-klik atau di-select */
+}
+
+.textContainer1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5rem; 
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 3; 
+  pointer-events: none;
+}
+
+.textContainer2{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5rem; /* Jarak dari tepi bawah */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 3; 
+  pointer-events: none;
+}
+
+.quote {
+  font-family: 'Playfair Display', serif; /* Font yang elegan untuk kutipan */
+  font-size: 40px;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-align: center;
+  max-width: 800px; /* Batas lebar teks agar tidak terlalu panjang */
+  line-height: 1.5;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5); /* Bayangan tipis agar lebih terbaca */
+}

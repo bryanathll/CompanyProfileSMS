@@ -1,0 +1,169 @@
+/* src/sections/JasaSection.module.css (Diperbarui dengan animasi huruf) */
+.section {
+  padding: 120px 0;
+  background-color: #282828;
+}
+
+.titleContainer {
+  padding: 0 100px;
+  margin-bottom: 4rem;
+}
+
+.titleLine {
+  display: block;
+  overflow: hidden;
+  height: auto;
+  line-height: 1.2;
+}
+
+/* Wrapper untuk setiap huruf agar animasi bekerja dengan benar */
+.charWrapper {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  height: 1.2em;
+}
+
+/* Style untuk huruf yang akan dianimasi */
+.charToAnimate {
+  display: inline-block;
+  will-change: transform, opacity;
+  transform-origin: bottom center;
+}
+
+.mainTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 52px;
+  font-weight: 600;
+  color: #FAFAFA;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #E0E0E0;
+  max-width: 600px;
+  margin: 0;
+}
+
+.swiperContainer :global(.swiper-pagination) {
+    position: relative;
+    bottom: auto;
+    margin-top: 3rem;
+}
+
+/* Styling untuk Swiper */
+.swiperContainer {
+  padding-bottom: 40px !important;
+}
+
+/* Kustomisasi pagination dots */
+.swiperContainer :global(.swiper-pagination-bullet) {
+  background-color: #666;
+  width: 8px;
+  height: 8px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.swiperContainer :global(.swiper-pagination-bullet-active) {
+  background-color: #FAFAFA;
+  width: 24px;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.desktopGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  padding: 0 100px;
+}
+
+.swiperContainer {
+  padding: 0 100px 0 100px !important;
+  width: 100%;
+}
+
+.swiperSlide {
+  height: auto;
+}
+
+/* Kontainer kustom untuk pagination */
+.paginationContainer {
+    position: relative;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 0 180px;
+}
+
+.paginationContainer :global(.swiper-pagination-bullet) {
+  background-color: #666;
+  opacity: 0.7;
+}
+
+.paginationContainer :global(.swiper-pagination-bullet-active) {
+  background-color: #FAFAFA;
+  opacity: 1;
+}
+
+/* Responsif untuk padding */
+@media (max-width: 1024px) {
+    .titleContainer,
+    .desktopGrid,
+    .paginationContainer {
+        padding: 0 60px;
+    }
+    .swiperContainer {
+        padding: 0 60px 0 60px !important;
+    }
+    
+    .mainTitle {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 991px) {
+  .titleContainer,
+  .swiperContainer {
+    padding: 0 60px !important;
+  }
+}
+
+@media (max-width: 767px) {
+    .titleContainer,
+    .desktopGrid,
+    .paginationContainer {
+        padding: 0 30px;
+    }
+    .swiperContainer {
+        padding: 0 30px 0 30px !important;
+    }
+    .swiperSlide {
+        height: auto;
+    }
+    
+    .mainTitle {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 1025px) {
+  .swiperContainer :global(.swiper-wrapper) {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+  }
+  
+  .swiperContainer :global(.swiper-slide) {
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
+
+  .swiperContainer :global(.swiper-pagination) {
+    display: none;
+  }
+}

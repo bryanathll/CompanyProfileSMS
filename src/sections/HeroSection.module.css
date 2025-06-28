@@ -1,0 +1,126 @@
+/* src/sections/HeroSection.module.css (VERSI BARU SESUAI GAMBAR) */
+
+.section {
+  position: relative;
+  height: 120vh; /* Dibuat lebih tinggi dari layar sesuai permintaan */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 25vh;
+  color: #F4F6FA;
+  overflow: hidden; /* Penting untuk menyembunyikan bagian gambar yang di-zoom */
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Memastikan gambar menutupi area tanpa distorsi */
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45); /* Overlay hitam semi-transparan */
+  z-index: 2;
+}
+
+.contentContainer {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 80px;
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.1;
+  text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 300px;
+  margin: 0 0 2.5rem 0;
+  padding: 40px 0;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.ctaButton {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #F3F4FB;
+  background-color: #2D3691; /* Warna sesuai permintaan */
+  border: none;
+  border-radius: 24px;
+  padding: 16px 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  background-color: #3b4acc; /* Warna hover yang sedikit lebih terang */
+}
+
+.addressContainer {
+  /* ▼▼▼ KEMBALIKAN MENJADI ABSOLUTE ▼▼▼ */
+  position: absolute;   /* Diubah dari fixed kembali ke absolute */
+  bottom: 60px;       /* Posisinya 60px dari BAWAH SECTION 120vh */
+  /* ▲▲▲ PERUBAHAN SELESAI ▲▲▲ */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  text-align: center;
+}
+
+/* Media Queries untuk Responsif */
+@media (max-width: 991px) {
+  .mainTitle {
+    font-size: 64px;
+  }
+  .subtitle {
+    font-size: 16px;
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    height: 100vh; /* Di mobile, tinggi kembali normal */
+  }
+  .mainTitle {
+    font-size: 42px;
+  }
+  .subtitle {
+    font-size: 14px;
+    padding: 0 1rem;
+  }
+  .ctaButton {
+    padding: 14px 32px;
+    font-size: 14px;
+  }
+  .addressContainer {
+    font-size: 12px;
+    bottom: 20px;
+  }
+}

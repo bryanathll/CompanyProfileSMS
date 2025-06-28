@@ -1,0 +1,24 @@
+.dividerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width:   0%; */
+    padding: 100px 5rem;
+    position: relative;
+    z-index: 3;
+    background-color: #F0F3FF;
+}
+
+.line{
+    flex-grow: 1;
+    height: 1px;
+    background-color: black;
+    opacity: 15%;
+}
+
+.compass{
+    height: 60px;
+    width: auto;
+    margin: 0 50px;
+    opacity: 80%;
+}

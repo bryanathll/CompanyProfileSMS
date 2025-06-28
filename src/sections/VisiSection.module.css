@@ -1,0 +1,26 @@
+/* src/sections/VisiSection.module.css */
+
+.section {
+  width: 100%;
+  padding: 100px 100px 0 100px; /* Beri padding vertikal yang cukup */
+  background-color: #F0F3FF; /* Warna latar yang konsisten */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+}
+
+.section h2{
+    margin: 0;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px; /* Ukuran font yang besar dan terbaca */
+  font-weight: 500;
+  color: #2D2C37; /* Warna navy yang konsisten */
+  text-align: center;
+  line-height: 1.6; /* Jarak antar baris */
+  /* max-width: 900px; Batas lebar teks agar tidak terlalu memanjang */
+}

@@ -1,0 +1,40 @@
+/* src/components/MisiCard/MisiCard.module.css */
+
+.card {
+  background-color: #FFFFFF;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  /* width: 400px; */
+  min-height: 350px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center ;
+  
+}
+
+
+.icon {
+  height: 50px; /* Sesuaikan ukuran ikon */
+  width: auto;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #2D2C37;
+  margin: 0 0 1rem 0;
+}
+
+.description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555555;
+  margin: 0;
+  padding: 0 20px;
+}

@@ -1,0 +1,67 @@
+/* src/sections/MisiSection.module.css (VERSI BARU SESUAI GAMBAR) */
+
+.section {
+  padding: 160px 100px;
+  /* background-color: #F0F3FF; Warna latar sesuai permintaan */
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+
+.titleContainer {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 5rem auto; /* Jarak dari judul ke grid kartu */
+  /* background-color: #F4F6FA; */
+}
+
+.mainTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  color: #2D2C37;
+  margin: 0;
+}
+
+/* Garis pemisah di bawah judul */
+.separator {
+  width: 100px;
+  height: 5px;
+  background-color: #2D3691;
+  margin: 1rem auto 1.5rem auto; /* Jarak garis dari judul dan subjudul */
+  /* opacity: 0.5; */
+  border-radius: 99px;
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555555;
+  margin: 0;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolom di desktop */
+  gap: 2.5rem; /* Jarak antar kartu */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Media Query untuk Mobile */
+@media (max-width: 991px) {
+  .section {
+    padding: 100px 60px;
+  }
+  .gridContainer {
+    grid-template-columns: 1fr; /* 1 kolom di tablet & mobile */
+  }
+}
+
+@media (max-width: 767px) {
+    .section {
+        padding: 80px 30px;
+    }
+}

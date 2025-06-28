@@ -1,0 +1,84 @@
+/* src/sections/AboutSection.module.css */
+
+.aboutSection {
+    padding: 0 100px 80px 100px; /* Padding atas-bawah dan kiri-kanan */
+    box-sizing: border-box;
+    /* background-color: #F0F3FF; Warna latar yang sedikit beda dari sebelumnya */
+    overflow: hidden; /* Penting untuk menyembunyikan elemen saat animasi masuk */
+
+    z-index: 3; /* Pastikan section ini menutupi gambar sticky dari HeroSection */
+}
+
+/* Kolom Kiri (Judul) */
+.titleColumn {
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    font-family: 'Montserrat', serif;
+    font-size: 40px;
+    color: #2D2C37;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0;
+}
+.separator {
+  width: 100px;
+  height: 5px;
+  background-color: #2D3691;
+  margin: 20px auto 0 auto; /* Jarak garis dari judul dan subjudul */
+  /* opacity: 0.5; */
+  border-radius: 99px;
+}
+
+/* Kolom Kanan (Konten) */
+.contentColumn {
+    padding-top: 40px;   
+    text-align: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+
+.contentColumn p{
+    margin: 0;
+}
+
+.paragraph {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    color: #2D2C37;
+    align-items: center;
+    font-weight: 500;
+    }
+
+/* Tampilan untuk Mobile */
+@media (max-width: 768px) {
+    .aboutSection {
+        flex-direction: column; /* Tumpuk kolom secara vertikal */
+        min-height: auto;
+        padding: 4rem 5%;
+    }
+
+    .titleColumn, .contentColumn {
+        width: 100%;
+        flex-basis: auto;
+        padding-right: 0;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        /* Hapus style teks vertikal di mobile */
+        /* writing-mode: horizontal-tb;
+        transform: none;
+        text-align: left; */
+    }
+
+    .contentColumn {
+        padding-top: 0;
+    }
+}

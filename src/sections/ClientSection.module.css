@@ -1,0 +1,72 @@
+/* src/sections/ClientSection.module.css */
+
+.section {
+  width: 100%;
+  padding: 8rem 5%;
+  background-color: #FAFAFA; /* Warna latar keunguan seperti di contoh */
+  text-align: center;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Montserrat', serif;
+  font-size: 48px;
+  color: #2D2C37;
+  font-weight: 500;
+  margin: 0 0 5rem 0; /* Jarak ke grid logo */
+}
+
+.logoGrid {
+  display: grid;
+  /* Membuat 6 kolom sama lebar di layar besar */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 4rem 2rem; /* Jarak vertikal dan horizontal antar logo */
+  max-width: 1300px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* Jarak antara logo dan teks */
+  text-align: center;
+}
+
+.logoImage {
+  height: 70px; /* Tinggi maksimal logo */
+  width: auto;
+  max-width: 130px; /* Lebar maksimal logo */
+  object-fit: contain;
+}
+
+.logoName {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #555555;
+  text-transform: uppercase; /* Membuat teks menjadi kapital */
+
+}
+
+/* Media Query untuk membuat grid responsif */
+@media (max-width: 1200px) {
+  .logoGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .logoGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .logoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

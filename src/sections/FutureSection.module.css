@@ -1,0 +1,91 @@
+/* src/sections/FutureSection.module.css (Diperbarui) */
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+  /* ▼▼▼ PERUBAHAN #1: Membuat section mengisi tinggi layar ▼▼▼ */
+  height: 100vh;
+  box-sizing: border-box; /* Pastikan padding dan border tidak menambah ukuran */
+}
+
+/* Kolom Kiri - Gambar */
+.imageColumn {
+  width: 100%;
+  height: 100%; /* Buat kolom gambar mengisi tinggi section */
+  /* ▼▼▼ PERUBAHAN #2: Menambahkan padding 100px ▼▼▼ */
+  padding: 100px;
+  box-sizing: border-box;
+}
+
+.imageWrapper {
+  /* ▼▼▼ PERUBAHAN #3: Membuat wrapper mengisi area di dalam padding ▼▼▼ */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150%; /* Tetap 150% untuk ruang gerak animasi parallax */
+  object-fit: cover;
+}
+
+/* Kolom Kanan - Teks (Tidak ada perubahan signifikan) */
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Disesuaikan agar lebih rapi */
+  padding-left: 0; /* Disesuaikan agar alignment lebih baik dengan kolom kiri */
+  padding-right: 100px;
+}
+
+.title {
+  font-family: 'Montserrat', serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin: 0 0 1.5rem 0;
+}
+
+.description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #555555;
+  line-height: 2;
+  max-width: 450px;
+  text-align: left; /* Disesuaikan agar lebih rapi */
+  font-weight: 500;
+}
+
+/* ... (Media queries tetap sama) ... */
+/* Media Query untuk Mobile */
+@media (max-width: 992px) {
+  .section {
+    grid-template-columns: 1fr; /* Tumpuk kolom di layar kecil */
+    gap: 3rem;
+    margin: 4rem auto;
+    text-align: center;
+  }
+
+  .imageColumn {
+    order: 1; /* Gambar di atas */
+  }
+
+  .textColumn {
+    order: 2; /* Teks di bawah */
+    align-items: center; /* Pusatkan teks di mobile */
+  }
+
+  .description {
+    max-width: none;
+  }
+}
