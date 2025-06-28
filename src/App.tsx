@@ -5,13 +5,12 @@ import Navbar from './components/Navbar/navbar';
 import HeroSection from './sections/HeroSection';
 import AboutSection from './sections/AboutSection';
 import MisiSection from './sections/MisiSection';
-import SectionDivider from './components/Devider/SectionDivider';
 import KeunggulanSection from './sections/KeunggulanSection';
 import JasaSection from './sections/JasaSection';
-import VisiSection from './sections/VisiSection';
 import ImageRevealSection from './components/ImageReveal/ImageRevealSection';
 import FutureSection from './sections/FutureSection';
 import ClientSection from './sections/ClientSection';
+import Footer from './components/footer';
 
 import Lenis from '@studio-freight/lenis';
 import { gsap } from 'gsap';
@@ -73,6 +72,7 @@ function App() {
         <FutureSection/>
         <KeunggulanSection />
         <ClientSection />
+        <Footer />
         {/* Section Lainnya */}
       </main>
     </>

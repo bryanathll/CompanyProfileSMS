@@ -9,6 +9,7 @@
   /* ▼▼▼ PERUBAHAN #1: Membuat section mengisi tinggi layar ▼▼▼ */
   height: 100vh;
   box-sizing: border-box; /* Pastikan padding dan border tidak menambah ukuran */
+  background-color: #FFFFFF;
 }
 
 /* Kolom Kiri - Gambar */

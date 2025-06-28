@@ -1,0 +1,105 @@
+/* src/components/Footer/Footer.module.css */
+
+/* src/components/Footer/Footer.module.css (Perbaikan Posisi Logo) */
+
+.footer {
+  background-color: #2D3691;
+  color: #FFFFFF;
+  padding: 5rem 2rem;
+  /* ▼▼▼ PERUBAHAN #1 ▼▼▼ */
+  position: relative; /* Menjadi acuan untuk posisi absolut logo */
+  /* border-top: 1px solid rgba(255, 255, 255, 0.1); <-- HAPUS BARIS INI */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  /* ▼▼▼ PERUBAHAN #2: Mengubah posisi logo ▼▼▼ */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Kunci untuk centering & menaikkan 50% */
+  height: 50px;
+  width: auto;
+  background-color: #FAFAFA; /* Memberi background agar bagian bawahnya tidak transparan */
+  padding: 1rem; /* Beri sedikit padding di sekeliling logo */
+  border-radius: 50%; /* Membuat background logo menjadi lingkaran */
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+  /* margin-bottom: 1rem; <-- Hapus margin karena sudah absolute */
+}
+
+.companyName {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  /* Beri margin-top agar tidak tertutup logo */
+  margin-top: 3.5rem; 
+  margin-bottom: 2.5rem;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.nav a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #FFFFFF;
+}
+
+.caption {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 600px;
+  margin: 0 0 2.5rem 0;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.contactItem:hover {
+  color: #FFFFFF;
+}
+
+.copyright {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+}

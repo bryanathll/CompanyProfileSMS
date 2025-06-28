@@ -3,7 +3,7 @@
 .section {
   width: 100%;
   padding: 8rem 5%;
-  background-color: #FAFAFA; /* Warna latar keunguan seperti di contoh */
+  /* background-color: #FAFAFA; Warna latar keunguan seperti di contoh */
   text-align: center;
   align-items: center;
 }
