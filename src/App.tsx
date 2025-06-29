@@ -10,7 +10,9 @@ import JasaSection from './sections/JasaSection';
 import ImageRevealSection from './components/ImageReveal/ImageRevealSection';
 import FutureSection from './sections/FutureSection';
 import ClientSection from './sections/ClientSection';
+import ContactSection from './sections/Contact';
 import Footer from './components/footer';
+
 
 import Lenis from '@studio-freight/lenis';
 import { gsap } from 'gsap';
@@ -72,6 +74,7 @@ function App() {
         <FutureSection/>
         <KeunggulanSection />
         <ClientSection />
+        <ContactSection />
         <Footer />
         {/* Section Lainnya */}
       </main>
