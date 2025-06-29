@@ -5,7 +5,6 @@
     box-sizing: border-box;
     /* background-color: #F0F3FF; Warna latar yang sedikit beda dari sebelumnya */
     overflow: hidden; /* Penting untuk menyembunyikan elemen saat animasi masuk */
-
     z-index: 3; /* Pastikan section ini menutupi gambar sticky dari HeroSection */
 }
 
@@ -57,10 +56,11 @@
 
 /* Tampilan untuk Mobile */
 @media (max-width: 768px) {
+
     .aboutSection {
         flex-direction: column; /* Tumpuk kolom secara vertikal */
         min-height: auto;
-        padding: 4rem 5%;
+        padding: 0 30px 40px 30px;
     }
 
     .titleColumn, .contentColumn {
@@ -70,8 +70,9 @@
     }
 
     .title {
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
+        font-size: 32px;
+        /* padding: 0 30px; */
+        /* margin-bottom: 2rem; */
         /* Hapus style teks vertikal di mobile */
         /* writing-mode: horizontal-tb;
         transform: none;
@@ -80,5 +81,13 @@
 
     .contentColumn {
         padding-top: 0;
+    }
+    .contentColumn{
+        padding-top: 40px;
+    }
+    .paragraph{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.6;
     }
 }

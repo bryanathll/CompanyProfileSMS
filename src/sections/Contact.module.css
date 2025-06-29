@@ -3,7 +3,7 @@
 .section {
   /* background-color: #1a1a1a; Warna background gelap */
   color: #2D2C37;
-  padding: 120px 100px;
+  padding: 80px 100px 220px 100px;
 }
 
 .gridContainer {
@@ -22,9 +22,10 @@
 
 .mainTitle {
   font-family: 'Montserrat', serif;
-  font-size: 42px;
+  font-size: 52px;
   line-height: 1.3;
   margin: 0 0 40px 0;
+  font-weight: 500;
 }
 
 .infoLabel {
@@ -51,6 +52,7 @@
   display: flex;
   flex-direction: column;
   gap: 42px;
+  max-width: 300px;
 }
 
 .contactItem {
@@ -68,13 +70,13 @@
 .socialIcons {
   display: flex;
   gap: 1rem;
-  margin-top: auto; /* Mendorong ikon sosial ke bagian paling bawah */
-  padding-top: 3rem;
+  margin-top: 80px; /* Mendorong ikon sosial ke bagian paling bawah */
+  /* padding-top: 3rem; */
 }
 
 .socialIcons a {
   color: #2D2C37;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid #2D2C37;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -92,7 +94,7 @@
 
 
 /* --- Kolom Kanan --- */
-.rightColumn { }
+/* .rightColumn { } */
 
 .description {
   font-family: 'Montserrat', sans-serif;
@@ -160,13 +162,14 @@
 .submitButton:hover {
   background-color: #2D3691;
   color: #fff;
+  border-color: #2D3691;
 }
 
 /* --- Media Queries --- */
 @media (max-width: 991px) {
   .gridContainer {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 60px;
   }
   .section {
     padding: 100px 60px;
@@ -178,6 +181,29 @@
     padding: 80px 30px;
   }
   .mainTitle {
-    font-size: 42px;
+    font-size: 32px;
+  }
+  .contactDetails{
+    gap: 20px;
+  }
+  .socialIcons{
+    margin-top: 60px;
+  }
+  .infoText{
+    font-size: 14px;
+  }
+  .description{
+    font-size: 14px;
+  }
+  .inputField,
+  .textareaField{
+    font-size: 14px;
+  }
+  .submitButton{
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+  }
+  .section{
+    padding: 80px 30px 160px 30px;
   }
 }

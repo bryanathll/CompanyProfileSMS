@@ -2,7 +2,7 @@
 
 .section {
   width: 100%;
-  padding: 8rem 5%;
+  padding: 140px 5%;
   /* background-color: #FAFAFA; Warna latar keunguan seperti di contoh */
   text-align: center;
   align-items: center;
@@ -62,6 +62,12 @@
 @media (max-width: 768px) {
   .logoGrid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .title{
+    font-size: 32px;
+  }
+  .section{
+    padding: 80px 30px;
   }
 }
 

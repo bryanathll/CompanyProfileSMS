@@ -102,7 +102,16 @@
     font-size: 16px;
     max-width: 450px;
   }
+
 }
+
+@media (min-height: 800px){
+  .section{
+    padding-top: 35vh;
+  }
+}
+
+
 
 @media (max-width: 767px) {
   .section {
@@ -121,6 +130,8 @@
   }
   .addressContainer {
     font-size: 12px;
-    bottom: 20px;
+    bottom: 40px;
+    max-width: 300px;
+    /* padding-top: 800px; */
   }
 }

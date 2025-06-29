@@ -151,9 +151,9 @@ const JasaSection: React.FC = () => {
             spaceBetween={0}
             pagination={{ clickable: true }}
             grabCursor={true}
-            slidesPerView={1.2}
+            slidesPerView={1}
             breakpoints={{
-              640: { slidesPerView: 2.2 },
+              640: { slidesPerView: 1 },
               768: { slidesPerView: 3 },
             }}
           >

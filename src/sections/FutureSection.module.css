@@ -1,4 +1,4 @@
-/* src/sections/FutureSection.module.css (Diperbarui) */
+/* src/sections/FutureSection.module.css (Lengkap dengan Responsive) */
 
 .section {
   display: grid;
@@ -6,23 +6,20 @@
   align-items: center;
   gap: 5rem;
   width: 100%;
-  /* ▼▼▼ PERUBAHAN #1: Membuat section mengisi tinggi layar ▼▼▼ */
   height: 100vh;
-  box-sizing: border-box; /* Pastikan padding dan border tidak menambah ukuran */
+  box-sizing: border-box;
   background-color: #FFFFFF;
 }
 
 /* Kolom Kiri - Gambar */
 .imageColumn {
   width: 100%;
-  height: 100%; /* Buat kolom gambar mengisi tinggi section */
-  /* ▼▼▼ PERUBAHAN #2: Menambahkan padding 100px ▼▼▼ */
+  height: 100%;
   padding: 100px;
   box-sizing: border-box;
 }
 
 .imageWrapper {
-  /* ▼▼▼ PERUBAHAN #3: Membuat wrapper mengisi area di dalam padding ▼▼▼ */
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -35,16 +32,16 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 150%; /* Tetap 150% untuk ruang gerak animasi parallax */
+  height: 150%; /* Untuk ruang gerak animasi parallax */
   object-fit: cover;
 }
 
-/* Kolom Kanan - Teks (Tidak ada perubahan signifikan) */
+/* Kolom Kanan - Teks */
 .textColumn {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Disesuaikan agar lebih rapi */
-  padding-left: 0; /* Disesuaikan agar alignment lebih baik dengan kolom kiri */
+  align-items: flex-start;
+  padding-left: 0;
   padding-right: 100px;
 }
 
@@ -63,30 +60,57 @@
   color: #555555;
   line-height: 2;
   max-width: 450px;
-  text-align: left; /* Disesuaikan agar lebih rapi */
+  text-align: left;
   font-weight: 500;
 }
 
-/* ... (Media queries tetap sama) ... */
-/* Media Query untuk Mobile */
+
+/* --- Media Queries untuk Responsive --- */
+
+/* Tampilan Tablet */
 @media (max-width: 992px) {
   .section {
-    grid-template-columns: 1fr; /* Tumpuk kolom di layar kecil */
-    gap: 3rem;
-    margin: 4rem auto;
+    grid-template-columns: 1fr; /* Tumpuk kolom */
+    height: auto; /* Biarkan tinggi menyesuaikan konten */
+    gap: 2rem;
+    padding: 100px 60px; /* Beri padding vertikal dan kurangi padding horizontal */
+  }
+
+  .textColumn {
+    order: 2; /* Teks di bawah */
+    align-items: center; /* Pusatkan teks */
+    padding: 0;
     text-align: center;
   }
 
   .imageColumn {
     order: 1; /* Gambar di atas */
+    padding: 0; /* Hapus padding agar gambar bisa lebih besar */
+    height: 60vh; /* Beri tinggi spesifik untuk area gambar */
+  }
+}
+
+/* Tampilan Mobile */
+@media (max-width: 767px) {
+  .section {
+    padding: 0 0 80px 0; /* Hapus padding horizontal section agar gambar bisa full-width */
   }
 
   .textColumn {
-    order: 2; /* Teks di bawah */
-    align-items: center; /* Pusatkan teks di mobile */
+     padding: 0 30px; /* Beri padding terpisah untuk teks */
   }
 
-  .description {
-    max-width: none;
+  .title {
+    font-size: 32px;
+  }
+
+  /* KUNCI: Membuat gambar memenuhi layar di mobile */
+  .imageColumn {
+    height: 50vh; /* Sesuaikan tinggi gambar di mobile */
+    border-radius: 0; /* Hapus radius agar terlihat menyatu */
+  }
+
+  .imageWrapper {
+    border-radius: 0; /* Hapus radius agar terlihat menyatu */
   }
 }

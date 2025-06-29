@@ -1,6 +1,6 @@
 // src/sections/HeroSection.tsx (SOLUSI FINAL DENGAN EFEK PARALLAX ALAMAT)
 
-import React, { useEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'; // Impor ScrollTrigger
 import styles from './HeroSection.module.css';
@@ -12,29 +12,46 @@ gsap.registerPlugin(ScrollTrigger); // Daftarkan plugin
 const HeroSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      // Animasi zoom-out pada gambar latar (tetap ada)
+      
       gsap.from(`.${styles.image}`, {
         scale: 1.20,
         duration: 3.5,
         ease: 'power3.out',
       });
+      
+      ScrollTrigger.matchMedia({
+        
+        // (min-width: 768px) -> Untuk layar DESKTOP & TABLET
+        "(min-width: 768px)": function() {
+          // EFEK PARALLAX HANYA BERJALAN DI LAYAR LEBAR
+          
+          // 1. Langsung tempatkan alamat di posisi terlihat
+          gsap.set(`.${styles.addressContainer}`, { y: "-20vh" });
 
-      gsap.set(`.${styles.addressContainer}`, {y: "-20vh"});
-      // ▼▼▼ ANIMASI BARU UNTUK EFEK PARALLAX PADA ALAMAT ▼▼▼
+          // 2. Animasikan kembali ke posisi semula saat scroll
+          gsap.to(`.${styles.addressContainer}`, {
+            y: 0,
+            ease: "none",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top top",
+              end: "bottom bottom",
+              scrub: 0.5,
+            }
+          });
+        },
 
-      gsap.to(`.${styles.addressContainer}`, {
-                y: 0, // Animasikan kembali y ke posisi 0
-        ease: "none",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "bottom bottom",
-          scrub: 0.5, // scrub dibuat lebih cepat agar terasa natural
+        // (max-width: 767px) -> Untuk layar MOBILE
+        "(max-width: 767px)": function() {
+          // TIDAK ADA ANIMASI GSAP UNTUK ALAMAT DI MOBILE
+          // Posisinya akan diatur sepenuhnya oleh CSS.
+          // Kita pastikan nilai y-nya 0.
+          gsap.set(`.${styles.addressContainer}`, { y: 0 });
         }
-        })
 
+      });
     }, sectionRef);
 
     return () => ctx.revert();

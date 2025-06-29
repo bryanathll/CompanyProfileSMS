@@ -129,7 +129,7 @@
 @media (max-width: 991px) {
   .titleContainer,
   .swiperContainer {
-    padding: 0 60px !important;
+    padding: 0 30px !important;
   }
 }
 
@@ -140,7 +140,7 @@
         padding: 0 30px;
     }
     .swiperContainer {
-        padding: 0 30px 0 30px !important;
+        padding: 0 0 0 30px !important;
     }
     .swiperSlide {
         height: auto;

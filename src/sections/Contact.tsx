@@ -43,25 +43,25 @@ const ContactSection: React.FC = () => {
       <div className={styles.gridContainer}>
         {/* Kolom Kiri */}
         <div className={styles.leftColumn}>
-          <h2 className={styles.mainTitle}>Please contact us if you have any questions:</h2>
+          <h2 className={styles.mainTitle}>Hubungi kami jika anda mempunyai pertanyaan:</h2>
           
           <div className={styles.workingHours}>
-            <p className={styles.infoLabel}>Working hours</p>
-            <p className={styles.infoText}>from Monday to Friday 10:00 AM – 5:00 PM London time.</p>
+            <p className={styles.infoLabel}>Jam kerja</p>
+            <p className={styles.infoText}>Senin sampai Jumat 08:30  – 17:00 WIB.</p>
           </div>
 
           <div className={styles.contactDetails}>
             <div className={styles.contactItem}>
               <IoLocationSharp size={20} className={styles.icon} />
-              <p className={styles.infoText}>Tower of Nautical Inspection, Yemen Road, Yemen</p>
+              <p className={styles.infoText}>Ruko Kara Junction Blok B No.8 Batam Centre - Kepulauan Riau</p>
             </div>
             <div className={styles.contactItem}>
               <IoCall size={20} className={styles.icon} />
-              <p className={styles.infoText}>+1 93214568, +00099446688</p>
+              <p className={styles.infoText}>(+62) 852 9511 2229</p>
             </div>
             <div className={styles.contactItem}>
               <IoMail size={20} className={styles.icon} />
-              <p className={styles.infoText}>info@nauticalinspection.com</p>
+              <p className={styles.infoText}>info.smsshipping@gmail.com</p>
             </div>
           </div>
 
@@ -76,24 +76,24 @@ const ContactSection: React.FC = () => {
         {/* Kolom Kanan */}
         <div className={styles.rightColumn}>
           <p className={styles.description}>
-            Our team is here to assist you with personalized solutions and prompt responses. Whether you have questions about our products or services, we're just a message or call away!
+            Tim kami siap membantu Anda dengan solusi yang dipersonalisasi dan tanggapan yang cepat. Jika Anda memiliki pertanyaan tentang layanan kami, kami hanya berjarak satu pesan atau telepon saja!
           </p>
 
           <form onSubmit={handleSubmit} className={styles.contactForm}>
             <div className={styles.formGroup}>
-              <input type="text" id="name" name="name" value={formData.name} onChange={handleInputChange} placeholder="Name *" required className={styles.inputField} />
+              <input type="text" id="name" name="name" value={formData.name} onChange={handleInputChange} placeholder="Nama *" required className={styles.inputField} />
             </div>
             <div className={styles.formGroup}>
               <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Email *" required className={styles.inputField} />
             </div>
             <div className={styles.formGroup}>
-              <input type="tel" id="contactNumber" name="contactNumber" value={formData.contactNumber} onChange={handleInputChange} placeholder="Contact Number *" required className={styles.inputField} />
+              <input type="tel" id="contactNumber" name="contactNumber" value={formData.contactNumber} onChange={handleInputChange} placeholder="Nomor Telepon *" required className={styles.inputField} />
             </div>
             <div className={styles.formGroup}>
-              <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleInputChange} placeholder="Subject" className={styles.inputField} />
+              <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleInputChange} placeholder="Subjek" className={styles.inputField} />
             </div>
             <div className={styles.formGroup}>
-              <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} placeholder="Message" rows={3} className={styles.textareaField}></textarea>
+              <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} placeholder="Pesan" rows={3} className={styles.textareaField}></textarea>
             </div>
             <button type="submit" className={styles.submitButton}>
               <span>Submit Message</span>

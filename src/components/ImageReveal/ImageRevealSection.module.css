@@ -67,3 +67,14 @@
   line-height: 1.5;
   text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5); /* Bayangan tipis agar lebih terbaca */
 }
+
+@media (max-width: 768px) {
+
+  .quote{
+    font-size: 20px;
+  }
+
+  .textContainer1, .textContainer2{
+    padding: 2.5rem 30px;
+  }
+}

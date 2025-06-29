@@ -1,9 +1,11 @@
-/* src/components/JasaCard/JasaCard.module.css */
+/* src/components/JasaCard/JasaCard.module.css (LENGKAP) */
+
 .card {
   width: 100%;
   height: 100%;
 }
 
+/* --- Style untuk Desktop --- */
 .imageContainer {
   position: relative;
   width: 100%;
@@ -11,6 +13,7 @@
   overflow: hidden;
 }
 
+/* Hanya aktifkan cursor pointer di layar besar tempat hover bekerja */
 @media (min-width: 1025px) {
   .imageContainer {
     cursor: pointer;
@@ -22,7 +25,6 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
-
 }
 
 .overlay {
@@ -30,12 +32,12 @@
   top: 0; left: 0; width: 100%; height: 100%;
   background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
   opacity: 1; /* Selalu ada gradien tipis di bawah */
-  transition: opacity 1s ease;
+  transition: background 0.6s ease, opacity 0.6s ease; /* Transisi lebih halus */
 }
 
 .contentContainer {
   position: absolute;
-  bottom: 20px; /* KUNCI #1: Posisi dasar selalu 20px dari bawah */
+  bottom: 20px;
   left: 1.5rem;
   right: 1.5rem;
   color: #fff;
@@ -52,36 +54,69 @@
 .description {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
+  font-weight: 500;
   line-height: 1.6;
   margin: 0;
-  padding-top: 20px; /* KUNCI #2: Jarak 20px antara judul dan deskripsi */
-  
-  /* Sembunyikan deskripsi di luar container */
+  padding-top: 20px;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   transition: max-height 0.4s ease, opacity 0.4s ease;
 }
 
-/* --- Efek Hover --- */
-/* .imageContainer:hover .image {
-  transform: scale(1.05);
-} */
+/* --- Efek Hover (Hanya di Desktop) --- */
+@media (min-width: 1025px) {
+  .imageContainer:hover .image {
+    transform: scale(1.05);
+  }
 
-.imageContainer:hover .overlay {
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 1s ease;
+  .imageContainer:hover .overlay {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .imageContainer:hover .description {
+    max-height: 150px; /* Sesuaikan dengan tinggi maksimal deskripsi */
+    opacity: 1;
+  }
 }
 
-.imageContainer:hover .description {
-  max-height: 150px; /* Sesuaikan dengan tinggi maksimal deskripsi */
-  opacity: 1;
+/* --- Style untuk Konten Mobile (Sebelumnya Hilang) --- */
+.mobileContent {
+  display: none; /* Sembunyikan di desktop secara default */
+  padding-top: 1rem;
 }
 
-/* ... Sisa kode mobile tidak berubah ... */
-.mobileContent { display: none; }
+.mobileTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #FAFAFA;
+  margin: 0 0 0.5rem 0;
+}
+
+.mobileDescription {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #E0E0E0;
+  margin: 0;
+  max-width: 300px;
+}
+
+/* --- Media Query untuk mengubah layout di tablet & mobile --- */
 @media (max-width: 1024px) {
-    .imageContainer { cursor: default; height: 320px; }
-    .overlay, .contentContainer { display: none; }
-    .mobileContent { display: block; }
+  .imageContainer {
+    cursor: default;
+    height: 320px; /* Tinggi kartu di tablet & mobile */
+  }
+  
+  /* Sembunyikan elemen hover di tablet & mobile */
+  .overlay, .contentContainer {
+    display: none;
+  }
+  
+  /* Tampilkan blok konten mobile */
+  .mobileContent {
+    display: block;
+  }
 }

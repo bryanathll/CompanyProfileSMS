@@ -7,8 +7,7 @@ const AboutSection: React.FC = () => {
     return (
         <section className={styles.aboutSection}>
             <div className={styles.titleColumn}>
-                <h2 className={styles.title}>TENTANG</h2>
-                <h2 className={styles.title}>SAMUDERA MAJU SEJATI</h2>
+                <h2 className={styles.title}>TENTANG <br /> SAMUDERA MAJU SEJATI</h2>
             </div>
             <div className={styles.separator}></div>
             <div className={styles.contentColumn}>

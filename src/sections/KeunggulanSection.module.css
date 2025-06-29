@@ -21,7 +21,7 @@
   background-color: #1C1F4D;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 140px 0;
 }
 
 .titleContainer {
@@ -120,7 +120,7 @@
 /* --- TAHAP 2: Tampilan Mobile (<= 767px) --- */
 @media (max-width: 767px) {
     .frame {
-        padding: 3rem;
+        padding: 80px 0;
     }
 
     /* BARU DI SINI kita ubah grid menjadi 1 kolom (vertikal) */
@@ -140,5 +140,14 @@
 
     .cardDescription {
         font-size: 13px;
+    }
+    .titleContainer{
+      padding: 0 30px;
+    }
+    .mainTitle{
+      font-size:32px;
+    }
+    .subtitle{
+      font-size: 14px;
     }
 }
