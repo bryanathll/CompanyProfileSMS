@@ -100,6 +100,28 @@
   line-height: 1.6;
 }
 
+.mainTitle {
+  /* CSS existing Anda tetap, tambahkan: */
+  line-height: 1.2;
+}
+
+/* Styling untuk setiap baris title */
+.titleLine {
+  display: block;
+  overflow: hidden;
+}
+
+/* Wrapper untuk setiap karakter */
+.charWrapper {
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* Karakter yang akan dianimasikan */
+.charToAnimate {
+  display: inline-block;
+  will-change: transform, opacity;
+}
 
 /* --- TAHAP 1: Tampilan Tablet (<= 1024px) --- */
 @media (max-width: 1024px) {
@@ -145,7 +167,7 @@
       padding: 0 30px;
     }
     .mainTitle{
-      font-size:32px;
+      font-size:36px;
     }
     .subtitle{
       font-size: 14px;

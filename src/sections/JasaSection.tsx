@@ -1,3 +1,5 @@
+// jasaSection.tsx
+
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -86,7 +88,7 @@ const JasaSection: React.FC = () => {
           ease: "power2.out"
         },
         ease: "back.out(1.7)",
-      }, "-=0.5"); // Mulai sedikit sebelum animasi pertama benar-benar selesai
+      }, "-=0.8"); // Mulai sedikit sebelum animasi pertama benar-benar selesai
 
       // Animasi subtitle setelah judul selesai
       mainTimeline.to(subtitleRef.current, {
@@ -94,14 +96,14 @@ const JasaSection: React.FC = () => {
         opacity: 1,
         duration: 0.6,
         ease: "power2.out",
-      }, "-=0.3");
+      }, "-=0.8");
 
       // Trigger animasi saat scroll
       ScrollTrigger.create({
         trigger: titleRef.current,
         start: "top 80%",
         animation: mainTimeline,
-        once: false, // Animasi hanya berjalan sekali
+        toggleActions: 'play none none reverse'
       });
 
     }, titleRef);
