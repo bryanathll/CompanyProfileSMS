@@ -21,7 +21,7 @@
   background-color: #1C1F4D;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 140px 0;
+  padding: 120px 0;
 }
 
 .titleContainer {
@@ -32,8 +32,8 @@
 
 .mainTitle {
   font-family: 'Montserrat', sans-serif;
-  font-size: 42px;
-  font-weight: 600;
+  font-size: 40px;
+  font-weight: 500;
   margin: 0 0 1rem 0;
 }
 
@@ -91,7 +91,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 24px;
-  max-width: 260px;
+  max-width: 250px;
 }
 
 .cardDescription {
@@ -134,7 +134,7 @@
   .frame {
     max-width: 100%;
     margin: 0;
-    padding: 5rem 3rem;
+    padding: 5rem 0;
   }
   /* Di sini, .gridContainer MASIH menggunakan 'repeat(3, 1fr)' dari atas, jadi tetap horizontal */
 }
@@ -142,29 +142,26 @@
 /* --- TAHAP 2: Tampilan Mobile (<= 767px) --- */
 @media (max-width: 767px) {
     .frame {
-        padding: 80px 0;
+        padding: 80px 0 0 0;
     }
-
     /* BARU DI SINI kita ubah grid menjadi 1 kolom (vertikal) */
     .gridContainer {
       grid-template-columns: 1fr;
       /* gap: 0; Dihilangkan agar rapat sesuai permintaan "berdempetan kebawah" */
     }
-
     /* Dan ubah bentuk kartu menjadi persegi panjang */
     .card {
         height: 280px;
     }
-
     .cardTitle {
         font-size: 20px;
     }
-
     .cardDescription {
         font-size: 13px;
     }
     .titleContainer{
       padding: 0 30px;
+      margin-bottom: 40px;
     }
     .mainTitle{
       font-size:36px;

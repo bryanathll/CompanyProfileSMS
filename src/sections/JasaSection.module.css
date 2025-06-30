@@ -1,4 +1,5 @@
-/* src/sections/JasaSection.module.css (Diperbarui dengan animasi huruf) */
+/* src/sections/JasaSection.module.css - Enhanced Responsive */
+
 .section {
   padding: 140px 0;
   background-color: #1C1F4D;
@@ -6,7 +7,7 @@
 
 .titleContainer {
   padding: 0 100px;
-  margin-bottom: 4rem;
+  margin-bottom: 60px;
 }
 
 .titleLine {
@@ -34,7 +35,7 @@
 .mainTitle {
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
-  font-weight: 600;
+  font-weight: 500;
   color: #FAFAFA;
   margin: 0 0 1rem 0;
   line-height: 1.2;
@@ -110,38 +111,240 @@
   opacity: 1;
 }
 
-/* Responsif untuk padding */
+/* ===== ENHANCED RESPONSIVE BREAKPOINTS ===== */
 
 
-@media (max-width: 991px) {
-  .titleContainer,
+
+
+/* Standard Desktop (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .section {
+    padding: 140px 0;
+  }
+  
+  .titleContainer {
+    padding: 0 80px;
+  }
+  
+  .mainTitle {
+    font-size: 40px;
+  }
+  
+  .desktopGrid {
+    padding: 0 80px;
+  }
+  
   .swiperContainer {
-    padding: 0 30px !important;
+    padding: 0 80px 0 80px !important;
   }
 }
 
-@media (max-width: 767px) {
-    .titleContainer,
-    .desktopGrid,
-    .paginationContainer {
-        padding: 0 30px;
-    }
-    .swiperContainer {
-        padding: 0 0 0 30px !important;
-    }
-    .swiperSlide {
-        height: auto;
-    }
-    
-    .mainTitle {
-        font-size: 36px;
-    }
+/* Large Tablet Landscape (1025px - 1199px) */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .section {
+    padding: 120px 0;
+  }
 
-    .section {
-      padding: 80px 0;
-    }
+  .titleContainer{
+    padding: 0 80px;
+  }
+  
+  .mainTitle {
+    font-size: 40px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    max-width: 550px;
+  }
+
+  .swiperContainer {
+    padding: 0 60px 0 60px !important;
+  }
+
+  .desktopGrid{
+    padding: 0 80px;
+  }
+
+  .swiperContainer :global(.swiper-wrapper) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .swiperContainer :global(.swiper-slide) {
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
+
+  .swiperContainer :global(.swiper-pagination) {
+    display: none;
+  }
 }
 
+/* Tablet Portrait & Small Laptop (992px - 1024px) */
+@media (min-width: 992px) and (max-width: 1024px) {
+  .section {
+    padding: 100px 0;
+  }
+  
+  .titleContainer {
+    padding: 0 50px;
+    margin-bottom: 40px;
+  }
+  
+  .mainTitle {
+    font-size: 40px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    max-width: 550px;
+  }
+  
+  .swiperContainer {
+    padding: 0 0 0 50px !important;
+  }
+}
+
+/* Large Tablet (768px - 991px) - Sesuai dengan kode asli Anda */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+    padding: 80px 0;
+  }
+  
+  .titleContainer {
+    padding: 0 30px;
+    margin-bottom: 40px;
+  }
+  
+  .mainTitle {
+    font-size: 36px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+
+  }
+  
+  .swiperContainer {
+    padding: 0 0 0 30px !important;
+  }
+}
+
+/* Small Tablet & Large Mobile (600px - 767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+  .section {
+    padding: 80px 0;
+  }
+  
+  .titleContainer {
+    padding: 0 35px;
+    margin-bottom: 2.5rem;
+  }
+  
+  .mainTitle {
+    font-size: 36px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    max-width: 450px;
+    line-height: 1.5;
+  }
+  
+  .swiperContainer {
+    padding: 0 0 0 30px !important;
+  }
+}
+
+/* Mobile Landscape (481px - 599px) */
+@media (min-width: 481px) and (max-width: 599px) {
+  .section {
+    padding: 70px 0;
+  }
+  
+  .titleContainer {
+    padding: 0 30px;
+    margin-bottom: 40px;
+  }
+  
+  .mainTitle {
+    font-size: 36px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    max-width: 400px;
+    line-height: 1.6;
+  }
+  
+  .swiperContainer {
+    padding: 0 0 0 30px !important;
+  }
+}
+
+/* Mobile Portrait (320px - 480px) - Sesuai dengan kode asli Anda */
+@media (max-width: 480px) {
+  .titleContainer,
+  .desktopGrid,
+  .paginationContainer {
+    padding: 0 20px;
+  }
+  
+  .swiperContainer {
+    padding: 0 0 0 20px !important;
+  }
+  
+  .swiperSlide {
+    height: auto;
+  }
+  
+  .mainTitle {
+    font-size: 36px;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+  
+  .titleContainer {
+    margin-bottom: 40px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+/* Small Mobile (max-width: 320px) */
+@media (max-width: 320px) {
+  .section {
+    padding: 50px 0;
+  }
+  
+  .titleContainer,
+  .desktopGrid,
+  .paginationContainer {
+    padding: 0 15px;
+  }
+  
+  .swiperContainer {
+    padding: 0 0 0 15px !important;
+  }
+  
+  .mainTitle {
+    font-size: 32px;
+  }
+  
+  .subtitle {
+    font-size: 12px;
+    /* max-width: 280px; */
+  }
+}
+
+/* Grid behavior for desktop - Mempertahankan logika asli Anda */
 @media (min-width: 1025px) {
   .swiperContainer :global(.swiper-wrapper) {
     display: grid;

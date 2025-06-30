@@ -30,9 +30,9 @@
 .overlay {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
   opacity: 1; /* Selalu ada gradien tipis di bawah */
-  transition: background 0.6s ease, opacity 0.6s ease; /* Transisi lebih halus */
+  transition: background 0.4s ease, opacity 0.4s ease; /* Transisi lebih halus */
 }
 
 .contentContainer {
@@ -66,9 +66,7 @@
 
 /* --- Efek Hover (Hanya di Desktop) --- */
 @media (min-width: 1025px) {
-  .imageContainer:hover .image {
-    transform: scale(1.05);
-  }
+
 
   .imageContainer:hover .overlay {
     background: rgba(0, 0, 0, 0.7);
@@ -118,5 +116,17 @@
   /* Tampilkan blok konten mobile */
   .mobileContent {
     display: block;
+  }
+}
+
+@media (max-width: 320px) {
+  .mobileDescription{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobileDescription{
+    max-width: 90%;
   }
 }
