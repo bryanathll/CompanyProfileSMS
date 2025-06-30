@@ -33,7 +33,7 @@
 
 .mainTitle {
   font-family: 'Montserrat', sans-serif;
-  font-size: 52px;
+  font-size: 40px;
   font-weight: 600;
   color: #FAFAFA;
   margin: 0 0 1rem 0;
@@ -111,20 +111,7 @@
 }
 
 /* Responsif untuk padding */
-@media (max-width: 1024px) {
-    .titleContainer,
-    .desktopGrid,
-    .paginationContainer {
-        padding: 0 60px;
-    }
-    .swiperContainer {
-        padding: 0 60px 0 60px !important;
-    }
-    
-    .mainTitle {
-        font-size: 42px;
-    }
-}
+
 
 @media (max-width: 991px) {
   .titleContainer,

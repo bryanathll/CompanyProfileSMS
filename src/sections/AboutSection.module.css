@@ -1,11 +1,13 @@
-/* src/sections/AboutSection.module.css */
+/* src/sections/AboutSection.module.css - ENHANCED RESPONSIVE VERSION */
 
 .aboutSection {
-    padding: 0 100px 80px 100px; /* Padding atas-bawah dan kiri-kanan */
+    padding: 0 100px 80px 100px;
     box-sizing: border-box;
-    /* background-color: #F0F3FF; Warna latar yang sedikit beda dari sebelumnya */
-    overflow: hidden; /* Penting untuk menyembunyikan elemen saat animasi masuk */
-    z-index: 3; /* Pastikan section ini menutupi gambar sticky dari HeroSection */
+    overflow: hidden;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* Kolom Kiri (Judul) */
@@ -16,32 +18,31 @@
 
 .title {
     font-family: 'Montserrat', serif;
-    font-size: 40px;
+    font-size: 44px;
     color: #2D2C37;
     font-weight: 500;
     line-height: 1.2;
     margin: 0;
 }
+
 .separator {
   width: 100px;
   height: 5px;
   background-color: #2D3691;
-  margin: 20px auto 0 auto; /* Jarak garis dari judul dan subjudul */
-  /* opacity: 0.5; */
+  margin: 1rem auto 1rem auto;
   border-radius: 99px;
 }
 
 /* Kolom Kanan (Konten) */
 .contentColumn {
-    padding-top: 40px;   
+    padding-top: 12px;   
     text-align: center;
     align-items: center;
     max-width: 800px;
     margin: 0 auto;
-    
 }
 
-.contentColumn p{
+.contentColumn p {
     margin: 0;
 }
 
@@ -52,15 +53,96 @@
     color: #2D2C37;
     align-items: center;
     font-weight: 500;
+}
+
+
+/* Standard Desktop (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .aboutSection {
+        padding: 0 80px 80px 80px;
+    }
+    
+    .title {
+        font-size: 40px;
+    }
+    
+    .separator {
+        width: 100px;
+        height: 5px;
+        /* margin: 22px auto 0 auto; */
+    }
+    
+    .contentColumn {
+        max-width: 750px;
+    }
+}
+
+/* Large Tablet Landscape (768px - 991px) */
+@media (min-width: 769px) and (max-width: 991px) {
+    .aboutSection {
+        padding: 0 30px 80px 30px;
+    }
+    
+    .title {
+        font-size: 36px;
+        line-height: 1.25;
+    }
+    
+    .separator {
+        width: 90px;
+        height: 4px;
+    }
+    
+    .contentColumn {
+        max-width: 650px;
+    }
+    
+    .paragraph {
+        font-size: 14px;
+        line-height: 28px;
+        text-align: center;
+    }
+}
+
+/* Tablet Portrait & Large Mobile (576px - 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+    .aboutSection {
+        flex-direction: column;
+        min-height: auto;
+        padding: 0 80px 40px 80px;
     }
 
-/* Tampilan untuk Mobile */
-@media (max-width: 768px) {
+    .titleColumn, .contentColumn {
+        width: 100%;
+        flex-basis: auto;
+        padding-right: 0;
+    }
 
+    .title {
+        font-size: 36px;
+        line-height: 1.3;
+    }
+    
+    .separator {
+        width: 80px;
+        height: 4px;
+        margin: 1rem auto 1rem auto;
+    }
+
+    .paragraph {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.65;
+        /* text-align: justify; */
+    }
+}
+
+/* Small Mobile Screens (480px - 575px) */
+@media (min-width: 480px) and (max-width: 575px) {
     .aboutSection {
-        flex-direction: column; /* Tumpuk kolom secara vertikal */
+        flex-direction: column;
         min-height: auto;
-        padding: 0 30px 40px 30px;
+        padding: 0 32px 50px 32px;
     }
 
     .titleColumn, .contentColumn {
@@ -71,27 +153,97 @@
 
     .title {
         font-size: 32px;
-        /* padding: 0 30px; */
-        /* margin-bottom: 2rem; */
-        /* Hapus style teks vertikal di mobile */
-        /* writing-mode: horizontal-tb;
-        transform: none;
-        text-align: left; */
+        line-height: 1.35;
     }
-
-    .contentColumn {
-        padding-top: 0;
+        
+    .separator {
+        width: 70px;
+        height: 3px;
+        margin: 0.8rem auto 0.8rem auto;
     }
-    .contentColumn{
-        padding-top: 40px;
-    }
-    .paragraph{
-        font-size: 14px;
+        
+    .paragraph {
+        font-size: 13px;
         font-weight: 500;
         line-height: 1.6;
         text-align: justify;
     }
-    .separator{
+}
+
+/* Extra Small Mobile Screens (320px - 479px) */
+@media (min-width: 320px) and (max-width: 479px) {
+    .aboutSection {
+        flex-direction: column;
+        min-height: auto;
+        padding: 0 30px 40px 30px;
+        align-items: center;
+    }
+
+    .titleColumn, .contentColumn {
+        width: 100%;
+        flex-basis: auto;
+        padding-right: 0;
+    }
+
+    .title {
+        font-size: 32px;
+        line-height: 1.4;
+    }
+    
+    .separator {
+        width: 60px;
         height: 3px;
+        margin: 0.7rem auto;
+    }
+
+    .contentColumn {
+        padding-top: 28px;
+        /* max-width: 280px; */
+    }
+    
+    .paragraph {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.55;
+        text-align: justify;
     }
 }
+
+/* Very Small Mobile Screens (Below 320px) */
+@media (max-width: 319px) {
+    .aboutSection {
+        flex-direction: column;
+        min-height: auto;
+        padding: 0 30px 30px 30px;
+    }
+
+    .titleColumn, .contentColumn {
+        width: 100%;
+        flex-basis: auto;
+        padding-right: 0;
+    }
+
+    .title {
+        font-size: 36px;
+        line-height: 1.45;
+    }
+    
+    .separator {
+        width: 50px;
+        height: 2px;
+        margin: 0.6rem auto 0.6rem auto;
+    }
+
+    .contentColumn {
+        padding-top: 24px;
+        max-width: 240px;
+    }
+    
+    .paragraph {
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: justify;
+    }
+}
+

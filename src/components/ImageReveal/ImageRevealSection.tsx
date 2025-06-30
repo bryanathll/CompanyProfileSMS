@@ -9,25 +9,24 @@ import revealImageFile from '../../assets/kapal2.png';
 gsap.registerPlugin(ScrollTrigger);
 
 const ImageRevealSection: React.FC = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-  // Hapus ref untuk image, karena kita akan menganimasikan seluruh section
-  // const imageRef = useRef<HTMLImageElement>(null); 
+  const sectionRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      // Cek apakah device mobile
+      const isMobile = window.innerWidth <= 768;
+      
       // Target animasi diubah ke sectionRef.current agar gradien dan teks ikut terungkap.
       gsap.fromTo(sectionRef.current, 
         {
           clipPath: 'inset(0 30% 0% 30%)',
-          // Skala sekarang diterapkan pada section, bukan hanya gambar
         }, 
-
         {
           clipPath: 'inset(0% 0% 0% 0%)',
           ease: 'none',
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: 'top 70%',
+            start: isMobile ? 'top bottom' : 'top 70%', // Mulai dari bawah layar untuk mobile
             end: 'center bottom',
             scrub: 1,
           },
@@ -42,7 +41,7 @@ const ImageRevealSection: React.FC = () => {
           ease: 'none',
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: 'top center',
+            start: isMobile ? 'top bottom' : 'top center', // Mulai dari bawah layar untuk mobile
             end: 'bottom center',
             scrub: 1,
           }
@@ -54,27 +53,27 @@ const ImageRevealSection: React.FC = () => {
   }, []);
 
   return (
-    // Tambahkan ref ke section
-    <section ref={sectionRef} className={styles.section}>
-      <img
-        // Hapus ref dari image
-        src={revealImageFile}
-        alt="Pemandangan hutan dan burung"
+    <div ref={sectionRef} className={styles.section}>
+      <img 
+        src={revealImageFile} 
+        alt="Kapal" 
         className={styles.image}
       />
-
+      
       <div className={styles.gradientOverlay}></div>
+      
       <div className={styles.textContainer1}>
-        <p className={styles.quote}>
-          "Keberhasilan pelayaran Anda adalah prioritas kami"
-        </p>
+        <h2 className={styles.quote}>
+          "Mitra Tepercaya untuk Operasional Kapal Anda"
+        </h2>
       </div>
+      
       <div className={styles.textContainer2}>
-        <p className={styles.quote}>
-          "Keberhasilan pelayaran Anda adalah prioritas kami"
-        </p>
+        <h2 className={styles.quote2}>
+          "Kami menyediakan layanan keagenan kapal yang profesional dan terstruktur, menjamin kelancaran seluruh prosedur administrasi dan operasional di pelabuhan."
+        </h2>
       </div>
-    </section>
+    </div>
   );
 };
 
