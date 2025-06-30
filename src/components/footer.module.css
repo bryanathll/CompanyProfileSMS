@@ -1,14 +1,10 @@
-/* src/components/Footer/Footer.module.css */
-
-/* src/components/Footer/Footer.module.css (Perbaikan Posisi Logo) */
+/* src/components/Footer/Footer.module.css - Responsive Version */
 
 .footer {
   background-color: #1C1F4D;
   color: #FFFFFF;
-  padding: 80px 2rem 20px 2rem;
-  /* ▼▼▼ PERUBAHAN #1 ▼▼▼ */
-  position: relative; /* Menjadi acuan untuk posisi absolut logo */
-  /* border-top: 1px solid rgba(255, 255, 255, 0.1); <-- HAPUS BARIS INI */
+  padding: 80px 1rem 20px 1rem;
+  position: relative;
 }
 
 .container {
@@ -22,18 +18,13 @@
 }
 
 .logo {
-  /* ▼▼▼ PERUBAHAN #2: Mengubah posisi logo ▼▼▼ */
   position: absolute;
   top: -5px;
   left: 50%;
-  transform: translate(-50%, -50%); /* Kunci untuk centering & menaikkan 50% */
-  /* height: 50px; */
+  transform: translate(-50%, -50%);
   width: auto;
-  /* background-color: #FAFAFA; Memberi background agar bagian bawahnya tidak transparan */
-  /* padding: 1rem; Beri sedikit padding di sekeliling logo */
-  /* border-radius: 50%; Membuat background logo menjadi lingkaran */
-  /* box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1); */
-  /* margin-bottom: 1rem; <-- Hapus margin karena sudah absolute */
+  height: auto;
+  max-width: 120px;
 }
 
 .companyName {
@@ -46,9 +37,6 @@
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  /* Beri margin-top agar tidak tertutup logo */
-  /* margin-top: 30px;  */
-  /* margin-bottom: 2.5rem; */
 }
 
 .nav {
@@ -108,4 +96,320 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.4);
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Large Desktop (1200px+) */
+@media (min-width: 1200px) {
+  .footer {
+    padding: 100px 2rem 30px 2rem;
+  }
+  
+  .container {
+    padding: 80px 0 0 0;
+  }
+  
+  .logo {
+    max-width: 340px;
+  }
+  
+  .companyName {
+    font-size: 16px;
+    top: 65px;
+  }
+  
+  .nav {
+    gap: 2rem 3rem;
+    margin-bottom: 48px;
+  }
+  
+  .nav a {
+    font-size: 15px;
+  }
+  
+  .caption {
+    font-size: 14px;
+    margin-bottom: 48px;
+  }
+  
+  .contactItem {
+    font-size: 15px;
+  }
+}
+
+/* Desktop (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .footer {
+    padding: 90px 2rem 25px 2rem;
+  }
+  
+  .container {
+    padding: 75px 0 0 0;
+  }
+  
+  .logo {
+    max-width: 300px;
+  }
+  
+  .companyName {
+    font-size: 15px;
+    top: 62px;
+  }
+  
+  .nav {
+    gap: 1.75rem 2.75rem;
+    margin-bottom: 42px;
+  }
+  
+  .caption {
+    font-size: 13px;
+    margin-bottom: 42px;
+  }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .footer {
+    padding: 80px 1.5rem 20px 1.5rem;
+  }
+  
+  .container {
+    padding: 68px 0 0 0;
+  }
+  
+  .logo {
+    max-width: 280px;
+    top: -1;
+  }
+  
+  .companyName {
+    font-size: 14px;
+    top: 58px;
+  }
+  
+  .nav {
+    gap: 1.5rem 2rem;
+    margin-bottom: 36px;
+  }
+  
+  .nav a {
+    font-size: 13px;
+  }
+  
+  .caption {
+    font-size: 12px;
+    margin-bottom: 36px;
+  }
+  
+  .contactInfo {
+    margin-bottom: 3.5rem;
+  }
+  
+  .contactItem {
+    font-size: 13px;
+  }
+}
+
+/* Mobile Large (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .footer {
+    padding: 70px 1rem 20px 1rem;
+  }
+  
+  .container {
+    padding: 60px 0 0 0;
+  }
+  
+  .logo {
+    max-width: 240px;
+    top: -3px;
+  }
+  
+  .companyName {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    top: 50px;
+  }
+  
+  .nav {
+    gap: 1rem 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .nav a {
+    font-size: 12px;
+  }
+  
+  .caption {
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    padding: 0 1rem;
+  }
+  
+  .contactInfo {
+    gap: 16px;
+    margin-bottom: 3rem;
+  }
+  
+  .contactItem {
+    font-size: 12px;
+    gap: 0.5rem;
+  }
+  
+  .copyright {
+    font-size: 11px;
+  }
+}
+
+/* Mobile Small (320px - 480px) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 60px 0.75rem 15px 0.75rem;
+  }
+  
+  .container {
+    padding: 50px 0 0 0;
+  }
+  
+  .logo {
+    max-width: 240px;
+    top: -3px;
+  }
+  
+  .companyName {
+    font-size: 11px;
+    letter-spacing: 1px;
+    top: 45px;
+    padding: 0 0.5rem;
+  }
+  
+  .nav {
+    gap: 0.75rem 1rem;
+    margin-bottom: 24px;
+    padding: 0 0.5rem;
+  }
+  
+  .nav a {
+    font-size: 11px;
+    text-align: center;
+  }
+  
+  .caption {
+    font-size: 10px;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    padding: 0 0.5rem;
+  }
+  
+  .contactInfo {
+    gap: 12px;
+    margin-bottom: 2.5rem;
+  }
+  
+  .contactItem {
+    font-size: 11px;
+    gap: 0.5rem;
+  }
+  
+  .contactItem svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .copyright {
+    font-size: 10px;
+  }
+}
+
+/* Extra Small Mobile (below 320px) */
+@media (max-width: 319px) {
+  .footer {
+    padding: 50px 0.5rem 15px 0.5rem;
+  }
+  
+  .container {
+    padding: 45px 0 0 0;
+  }
+  
+  .logo {
+    max-width: 200px;
+    top: 8px;
+  }
+  
+  .companyName {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    top: 40px;
+  }
+  
+  .nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .nav a {
+    font-size: 10px;
+  }
+  
+  .caption {
+    font-size: 9px;
+    margin-bottom: 20px;
+  }
+  
+  .contactInfo {
+    gap: 10px;
+    margin-bottom: 2rem;
+  }
+  
+  .contactItem {
+    font-size: 10px;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+  }
+  
+  .contactItem svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .copyright {
+    font-size: 9px;
+  }
+}
+
+/* Landscape Orientation for Mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+  .footer {
+    padding: 50px 1rem 15px 1rem;
+  }
+  
+  .container {
+    padding: 45px 0 0 0;
+  }
+  
+  .logo {
+    max-width: 85px;
+    top: 2px;
+  }
+  
+  .companyName {
+    top: 42px;
+    font-size: 11px;
+  }
+  
+  .nav {
+    margin-bottom: 20px;
+  }
+  
+  .caption {
+    margin-bottom: 20px;
+  }
+  
+  .contactInfo {
+    margin-bottom: 2rem;
+  }
 }
