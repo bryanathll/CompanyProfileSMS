@@ -1,8 +1,7 @@
-/* src/sections/MisiSection.module.css (VERSI BARU SESUAI GAMBAR) */
+/* src/sections/MisiSection.module.css - ENHANCED RESPONSIVE VERSION */
 
 .section {
   padding: 140px 100px;
-  /* background-color: #F0F3FF; Warna latar sesuai permintaan */
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
@@ -12,8 +11,7 @@
 .titleContainer {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto 5rem auto; /* Jarak dari judul ke grid kartu */
-  /* background-color: #F4F6FA; */
+  margin: 0 auto 5rem auto;
 }
 
 .mainTitle {
@@ -29,54 +27,206 @@
   width: 100px;
   height: 5px;
   background-color: #2D3691;
-  margin: 1rem auto 1.5rem auto; /* Jarak garis dari judul dan subjudul */
-  /* opacity: 0.5; */
+  margin: 1rem auto 1rem auto;
   border-radius: 99px;
 }
 
 .subtitle {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 14px;
+  line-height: 1.5;
   color: #555555;
   margin: 0;
+  padding-top: 12px;
 }
 
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 kolom di desktop */
-  gap: 2.5rem; /* Jarak antar kartu */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* Media Query untuk Mobile */
-@media (max-width: 991px) {
+/* Standard Desktop & Large Tablet (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
   .section {
-    padding: 100px 60px;
+    padding: 120px 80px;
   }
+  
+  .titleContainer {
+    max-width: 750px;
+    margin: 0 auto 80px auto;
+  }
+  
+  .mainTitle {
+    font-size: 40px;
+  }
+  
+  .separator {
+    width: 100px;
+    height: 5px;
+  }
+  
+}
+
+/* Medium Tablet Landscape (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+    padding: 100px 30px;
+  }
+  
+  .titleContainer {
+    max-width: 650px;
+    margin: 0 auto 4rem auto;
+  }
+  
+  .mainTitle {
+    font-size: 36px;
+  }
+  
+  .separator {
+    width: 90px;
+    height: 4px;
+  }
+  
   .gridContainer {
-    grid-template-columns: 1fr; /* 1 kolom di tablet & mobile */
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 600px;
   }
 }
 
-@media (max-width: 767px) {
+/* Tablet Portrait & Large Mobile (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
   .section {
-      padding: 100px 32px;
+    padding: 80px 30px;
   }
-  .subtitle{
-    font-size: 14px;
+  
+  .titleContainer {
+    max-width: 500px;
+    margin: 0 auto 3rem auto;
   }
-  .mainTitle{
-    font-size: 32px;
+  
+  .mainTitle {
+    font-size: 36px;
   }
-  .separator{
-    height: 3px;
+  
+  .separator {
+    width: 80px;
+    height: 4px;
+    margin: 1rem auto 1rem auto;
   }
-  .titleContainer{
-    margin: 0 0 40px 0;
-  }
-  .gridContainer{
-    gap: 20px;
+
+
+  
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 480px;
   }
 }
+
+/* Small Mobile Screens (480px - 575px) */
+@media (min-width: 480px) and (max-width: 575px) {
+  .section {
+    padding: 80px 30px;
+  }
+  
+  .titleContainer {
+    max-width: 420px;
+    margin: 0 auto 2.5rem auto;
+  }
+  
+  .mainTitle {
+    font-size: 36px;
+  }
+  
+  .separator {
+    width: 70px;
+    height: 3px;
+    margin: 0.8rem auto 0.8rem auto;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    max-width: 400px;
+  }
+}
+
+/* Extra Small Mobile Screens (320px - 479px) */
+@media (min-width: 320px) and (max-width: 479px) {
+  .section {
+    padding: 80px 30px;
+  }
+  
+  .titleContainer {
+    max-width: 280px;
+    margin: 0 auto 40px auto;
+  }
+  
+  .mainTitle {
+    font-size: 36px;
+    line-height: 1.3;
+  }
+  
+  .separator {
+    width: 60px;
+    height: 3px;
+    margin: 0.7rem auto;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    padding-top: 12px;
+  }
+  
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Very Small Mobile Screens (Below 320px) */
+@media (max-width: 319px) {
+  .section {
+    padding: 50px 16px;
+  }
+  
+  .titleContainer {
+    max-width: 260px;
+    margin: 0 auto 1.5rem auto;
+  }
+  
+  .mainTitle {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+  
+  .separator {
+    width: 50px;
+    height: 2px;
+    margin: 0.6rem auto 0.7rem auto;
+  }
+  
+  .subtitle {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    max-width: 240px;
+  }
+}
+
+/* ORIGINAL BREAKPOINTS (PRESERVED) */
+/* Medium Tablet & Small Desktop - Your original breakpoint */
+

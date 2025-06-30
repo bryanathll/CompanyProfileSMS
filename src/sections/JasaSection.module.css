@@ -149,6 +149,10 @@
     .mainTitle {
         font-size: 36px;
     }
+
+    .section {
+      padding: 80px 0;
+    }
 }
 
 @media (min-width: 1025px) {
