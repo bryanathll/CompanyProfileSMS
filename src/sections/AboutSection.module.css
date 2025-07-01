@@ -142,7 +142,7 @@
     .aboutSection {
         flex-direction: column;
         min-height: auto;
-        padding: 0 32px 50px 32px;
+        padding: 0 30px 40px 30px;
     }
 
     .titleColumn, .contentColumn {
@@ -152,7 +152,7 @@
     }
 
     .title {
-        font-size: 32px;
+        font-size: 36px;
         line-height: 1.35;
     }
         

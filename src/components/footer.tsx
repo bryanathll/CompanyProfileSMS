@@ -39,9 +39,18 @@ const Footer: React.FC = () => {
           </a>
         </div>
 
-        <p className={styles.copyright}>
-          © 2025 Samudera Maju Sejati
-        </p>
+        <div className={styles.footerBottom}>
+          <p className={styles.builtBy}>
+            Built by IT Department Indoproff
+          </p>
+          <p className={styles.copyright}>
+            © 2025 Samudera Maju Sejati
+          </p>
+          <a href="https://wa.me/6285295112229" target="_blank" rel="noopener noreferrer" className={styles.footerContact}>
+            <FaWhatsapp size={16} />
+            <span>Hubungi IT Support</span>
+          </a>
+        </div>
       </div>
     </footer>
   );

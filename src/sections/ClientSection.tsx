@@ -75,7 +75,7 @@ const ClientSection: React.FC = () => {
 
   return (
     <section ref={sectionRef} className={styles.section}>
-      <h2 className={styles.title}>EXISTING CUSTOMER</h2>
+      <h2 className={styles.title}>Existing Customer</h2>
       <div className={styles.logoGrid}>
         {/* LANGKAH 3: Render data klien secara dinamis */}
         {clientsData.map((client, index) => (

@@ -1,7 +1,7 @@
 /* src/sections/JasaSection.module.css - Enhanced Responsive */
 
 .section {
-  padding: 140px 0;
+  padding: 120px 0;
   background-color: #1C1F4D;
 }
 
@@ -34,7 +34,7 @@
 
 .mainTitle {
   font-family: 'Montserrat', sans-serif;
-  font-size: 40px;
+  font-size: 44px;
   font-weight: 500;
   color: #FAFAFA;
   margin: 0 0 1rem 0;
@@ -119,7 +119,7 @@
 /* Standard Desktop (1200px - 1399px) */
 @media (min-width: 1200px) and (max-width: 1399px) {
   .section {
-    padding: 140px 0;
+    padding: 120px 0;
   }
   
   .titleContainer {
@@ -185,11 +185,11 @@
 /* Tablet Portrait & Small Laptop (992px - 1024px) */
 @media (min-width: 992px) and (max-width: 1024px) {
   .section {
-    padding: 100px 0;
+    padding: 120px 0;
   }
   
   .titleContainer {
-    padding: 0 50px;
+    padding: 0 80px;
     margin-bottom: 40px;
   }
   
@@ -203,18 +203,18 @@
   }
   
   .swiperContainer {
-    padding: 0 0 0 50px !important;
+    padding: 0 0 0 80px !important;
   }
 }
 
 /* Large Tablet (768px - 991px) - Sesuai dengan kode asli Anda */
 @media (min-width: 768px) and (max-width: 991px) {
   .section {
-    padding: 80px 0;
+    padding: 100px 0;
   }
   
   .titleContainer {
-    padding: 0 30px;
+    padding: 0 60px;
     margin-bottom: 40px;
   }
   
@@ -228,7 +228,7 @@
   }
   
   .swiperContainer {
-    padding: 0 0 0 30px !important;
+    padding: 0 0 0 60px !important;
   }
 }
 
@@ -239,7 +239,7 @@
   }
   
   .titleContainer {
-    padding: 0 35px;
+    padding: 0 30px;
     margin-bottom: 2.5rem;
   }
   
@@ -261,7 +261,7 @@
 /* Mobile Landscape (481px - 599px) */
 @media (min-width: 481px) and (max-width: 599px) {
   .section {
-    padding: 70px 0;
+    padding: 80px 0;
   }
   
   .titleContainer {
@@ -275,7 +275,6 @@
   
   .subtitle {
     font-size: 14px;
-    max-width: 400px;
     line-height: 1.6;
   }
   
@@ -289,11 +288,11 @@
   .titleContainer,
   .desktopGrid,
   .paginationContainer {
-    padding: 0 20px;
+    padding: 0 30px;
   }
   
   .swiperContainer {
-    padding: 0 0 0 20px !important;
+    padding: 0 0 0 30px !important;
   }
   
   .swiperSlide {
@@ -313,25 +312,25 @@
   }
   
   .subtitle {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.5;
   }
 }
 
 /* Small Mobile (max-width: 320px) */
-@media (max-width: 320px) {
+@media (min-width: 320px) and (max-width: 480px) {
   .section {
-    padding: 50px 0;
+    padding: 80px 0;
   }
   
   .titleContainer,
   .desktopGrid,
   .paginationContainer {
-    padding: 0 15px;
+    padding: 0 30px;
   }
   
   .swiperContainer {
-    padding: 0 0 0 15px !important;
+    padding: 0 0 0 30px !important;
   }
   
   .mainTitle {

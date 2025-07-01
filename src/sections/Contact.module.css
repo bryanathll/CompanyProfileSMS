@@ -3,7 +3,7 @@
 .section {
   /* background-color: #1a1a1a; Warna background gelap */
   color: #2D2C37;
-  padding: 80px 100px 220px 100px;
+  padding: 40px 100px 160px 100px;
 }
 
 .gridContainer {
@@ -38,7 +38,7 @@
 
 .infoText {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.7;
   color: #2D2C37;
   margin: 0;
@@ -98,7 +98,7 @@
 
 .description {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.7;
   color: #2D2C37;
   margin: 0 0 3rem 0;
@@ -169,7 +169,7 @@
 
 @media (max-width: 767px) {
   .section {
-    padding: 80px 30px;
+    padding: 100px 30px;
   }
   .mainTitle {
     font-size: 32px;
@@ -204,7 +204,7 @@
 @media (min-width: 992px) and (max-width: 1199px) {
 
   .section {
-    padding: 80px 60px 180px 60px;
+    padding: 100px 80px 2000px 80px;
   }
 
   .gridContainer {
@@ -219,7 +219,7 @@
 /* Tablet & Laptop (Small) */
 @media (min-width: 769px) and (max-width: 991px) {
   .section {
-    padding: 100px 80px 160px 80px;
+    padding: 40px 60px 140px 60px;
   }
   .gridContainer {
     /*layout menjadi 1 kolom */
@@ -228,7 +228,7 @@
   }
 
   .mainTitle {
-    font-size: 38px;
+    font-size: 36px;
   }
 
   .socialIcons {
@@ -240,7 +240,7 @@
 @media (min-width: 576px) and (max-width: 768px) {
 
   .section {
-    padding: 80px 60px 140px 60px;
+    padding: 40px 30px 120px 30px;
   }
 
   .gridContainer {
@@ -261,7 +261,7 @@
 @media (min-width: 480px) and (max-width: 575px) {
 
   .section {
-    padding: 80px 30px 120px 30px;
+    padding: 40px 30px 120px 30px;
   }
 
   .gridContainer {
@@ -289,10 +289,10 @@
 }
 
 /* Ponsel (Small) */
-@media (min-width: 320px) and (max-width: 479px) {
+@media (min-width: 320px) and (max-width: 480px) {
 
   .section {
-    padding: 60px 20px 100px 20px;
+    padding: 20px 30px 120px 30px;
   }
 
   .gridContainer {
@@ -301,7 +301,7 @@
   }
 
   .mainTitle {
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 30px;
   }
 

@@ -70,7 +70,7 @@ const ImageRevealSection: React.FC = () => {
       
       <div className={styles.textContainer2}>
         <h2 className={styles.quote2}>
-          "Kami menyediakan layanan keagenan kapal yang profesional dan terstruktur, menjamin kelancaran seluruh prosedur administrasi dan operasional di pelabuhan."
+          "Dalam tekanan waktu dan kompleksitas pelabuhan, kami berdiri sebagai sistem yang menjaga semuanya tetap bergerak akurat, teratur, dan terkendali"
         </h2>
       </div>
     </div>

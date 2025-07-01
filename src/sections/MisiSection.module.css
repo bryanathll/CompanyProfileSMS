@@ -56,7 +56,7 @@
   
   .titleContainer {
     max-width: 750px;
-    margin: 0 auto 80px auto;
+    margin: 0 auto 4rem auto;
   }
   
   .mainTitle {
@@ -203,7 +203,7 @@
   }
   
   .mainTitle {
-    font-size: 32px;
+    font-size: 36px;
     line-height: 1.4;
   }
   

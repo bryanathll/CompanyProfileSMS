@@ -87,7 +87,7 @@
 .mobileTitle {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
   color: #FAFAFA;
   margin: 1.5rem 0 1rem 0;
 }
@@ -128,5 +128,8 @@
 @media (max-width: 480px) {
   .mobileDescription{
     max-width: 90%;
+    font-size: 12px;
   }
+
+  
 }

@@ -2,7 +2,7 @@
 
 .section {
   width: 100%;
-  padding: 140px 5%;
+  padding: 120px 100px;
   /* background-color: #FAFAFA; Warna latar keunguan seperti di contoh */
   text-align: center;
   align-items: center;
@@ -10,10 +10,10 @@
 
 .title {
   font-family: 'Montserrat', serif;
-  font-size: 48px;
+  font-size: 44px;
   color: #2D2C37;
   font-weight: 500;
-  margin: 0 0 5rem 0; /* Jarak ke grid logo */
+  margin: 0 0 60px 0; /* Jarak ke grid logo */
 }
 
 .logoGrid {
@@ -59,20 +59,71 @@
   }
 }
 
-@media (max-width: 768px) {
-  .logoGrid {
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width: 992px) and (max-width: 1199px){
+  .title{
+    font-size: 40px;
+  }
+  .section{
+    padding: 120px 80px;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+  .section{
+    padding: 100px 60px;
   }
   .title{
-    font-size: 32px;
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .logoGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .title{
+    font-size: 36px;
   }
   .section{
     padding: 80px 30px;
   }
 }
+@media (min-width: 480px) and (max-width: 575px) {
+    .logoGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-@media (max-width: 480px) {
+  .section{
+    padding: 80px 30px;
+  }
+
+  .title{
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
   .logoGrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .section{
+    padding: 80px 30px;
+  }
+  .title{
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 319px) {
+  .title{
+    font-size: 32px;
+  }
+
+  .logoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+    .section{
+    padding: 80px auto;
   }
 }
