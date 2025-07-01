@@ -136,6 +136,9 @@
     margin: 0;
     padding: 5rem 0;
   }
+  .cardTitle{
+    font-size: 24px;
+  }
   /* Di sini, .gridContainer MASIH menggunakan 'repeat(3, 1fr)' dari atas, jadi tetap horizontal */
 }
 

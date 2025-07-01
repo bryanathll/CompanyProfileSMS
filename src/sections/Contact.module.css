@@ -22,7 +22,7 @@
 
 .mainTitle {
   font-family: 'Montserrat', serif;
-  font-size: 52px;
+  font-size: 40px;
   line-height: 1.3;
   margin: 0 0 40px 0;
   font-weight: 500;
@@ -70,7 +70,7 @@
 .socialIcons {
   display: flex;
   gap: 1rem;
-  margin-top: 80px; /* Mendorong ikon sosial ke bagian paling bawah */
+  margin-top: auto; /* Mendorong ikon sosial ke bagian paling bawah */
   /* padding-top: 3rem; */
 }
 
@@ -166,15 +166,6 @@
 }
 
 /* --- Media Queries --- */
-@media (max-width: 991px) {
-  .gridContainer {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-  .section {
-    padding: 100px 60px;
-  }
-}
 
 @media (max-width: 767px) {
   .section {
@@ -206,4 +197,129 @@
   .section{
     padding: 80px 30px 160px 30px;
   }
+}
+
+/* --- Media Queries*/
+/* Laptop (Large) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .section {
+    padding: 80px 60px 180px 60px;
+  }
+
+  .gridContainer {
+    gap: 4rem; /* Kurangi jarak antar kolom */
+  }
+  .mainTitle {
+    font-size: 40px; /* Sedikit perkecil judul */
+  }
+
+}
+
+/* Tablet & Laptop (Small) */
+@media (min-width: 769px) and (max-width: 991px) {
+  .section {
+    padding: 100px 80px 160px 80px;
+  }
+  .gridContainer {
+    /*layout menjadi 1 kolom */
+    grid-template-columns: 1fr; 
+    gap: 60px;
+  }
+
+  .mainTitle {
+    font-size: 38px;
+  }
+
+  .socialIcons {
+    margin-top: 60px; /* Kurangi margin atas agar tidak terlalu jauh */
+  }
+
+}
+/* Tablet (Small) & Ponsel (Large) */
+@media (min-width: 576px) and (max-width: 768px) {
+
+  .section {
+    padding: 80px 60px 140px 60px;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .mainTitle {
+    font-size: 36px;
+  }
+
+  .socialIcons {
+    margin-top: 50px;
+  }
+
+}
+/* Ponsel (Standard) */
+@media (min-width: 480px) and (max-width: 575px) {
+
+  .section {
+    padding: 80px 30px 120px 30px;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .mainTitle {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .contactDetails {
+    gap: 25px; /* Kurangi jarak antar item kontak */
+  }
+
+  .socialIcons {
+    margin-top: 50px;
+  }
+
+  .infoText, .description, .inputField, .textareaField, .submitButton {
+    font-size: 14px; /* Sesuaikan ukuran font konten */
+  }
+
+}
+
+/* Ponsel (Small) */
+@media (min-width: 320px) and (max-width: 479px) {
+
+  .section {
+    padding: 60px 20px 100px 20px;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .mainTitle {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .contactDetails {
+    gap: 20px;
+    max-width: 100%; /* Biarkan teks alamat memenuhi lebar */
+  }
+
+  .socialIcons {
+    margin-top: 40px;
+  }
+
+  .infoText, .description, .inputField, .textareaField, .submitButton {
+    font-size: 14px;
+  }
+
+  .formGroup {
+    margin-bottom: 2rem; /* Kurangi margin antar input */
+  }
+
 }
