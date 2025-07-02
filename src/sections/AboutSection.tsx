@@ -2,20 +2,22 @@
 
 import React from 'react';
 import styles from './AboutSection.module.css';
+import { useTranslation } from 'react-i18next'
 
 const AboutSection: React.FC = () => {
+    const { t } = useTranslation();
     return (
         <section className={styles.aboutSection}>
             <div className={styles.titleColumn}>
-                <h2 className={styles.title}>Tentang <br /> Samudera Maju Sejati</h2>
+                <h2 className={styles.title}>{t('about_title1')} <br /> {t('about_title2')} </h2>
             </div>
             <div className={styles.separator}></div>
             <div className={styles.contentColumn}>
                 <p className={styles.paragraph}>
-                    PT. Samudra Maju Sejati  adalah  perusahaan keagenan kapal Indonesia,  didirikan pada 2024 dengan tenaga  profesional yang telah berdedikasi  dalam bidang keagenan kapal selama  belasan tahun serta komitmen untuk  memberikan layanan yang terbaik dan  dapat diandalkan klien di industri  maritim. <br /> <br />  
+                    {t('Description1')}
                 </p>
                 <p className={styles.paragraph}>
-                    Berkantor pusat secara strategis di  Batam, Indonesia, kami memastikan  cakupan yang komprehensif dan operasi  yang efisien
+                    {t('Description2')}
                 </p>
             </div>
         </section>

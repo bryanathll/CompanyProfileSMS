@@ -5,6 +5,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './MisiSection.module.css';
 import MisiCard from '../components/MisiCard/MisiCard';
+import { useTranslation } from 'react-i18next'
 
 // ▼▼▼ PENTING: Ganti dengan path ikon Anda yang sebenarnya ▼▼▼
 import iconIntegritas from '../assets/timbang.png';
@@ -17,29 +18,30 @@ gsap.registerPlugin(ScrollTrigger);
 const misiData = [
   {
     icon: iconIntegritas,
-    title: 'Integritas Tanpa Kompromi',
-    description: 'Kami mematuhi standar etika tertinggi dan berupaya membangun kepercayaan melalui transparansi dan komunikasi terbuka.',
+    title: 'cardTitle1',
+    description: 'cardDesc1',
   },
   {
     icon: iconKeahlian,
-    title: 'Keahlian yang Tak Tertandingi',
-    description: 'Tim kami yang terdiri dari para profesional berkualifikasi tinggi dan berpengalaman memiliki pengetahuan mendalam tentang peraturan maritim.',
+    title: 'cardTitle2',
+    description: 'cardDesc2',
   },
   {
     icon: iconDedikasi,
-    title: 'Dedikasi yang Tak Tergoyahkan',
-    description: 'Kami berkomitmen untuk memberikan perhatian yang dipersonalisasi dan solusi efisien untuk kebutuhan unik setiap klien.',
+    title: 'cardTitle3',
+    description: 'cardDesc3',
   },
   {
     icon: iconPelayanan,
-    title: 'Pelayanan Terbaik',
-    description: 'Memberikan pelayanan yang maksimal, membangun kepercayaan serta kepuasan klien adalah tujuan utama kami.',
+    title: 'cardTitle4',
+    description: 'cardDesc4',
   },
 ];
 
 const MisiSection: React.FC = () => {
+  const { t } = useTranslation(); 
   const sectionRef = useRef<HTMLElement>(null);
-
+  
   useEffect(() => {
     // Animasi fade-in untuk setiap kartu
     const ctx = gsap.context(() => {
@@ -62,10 +64,10 @@ const MisiSection: React.FC = () => {
   return (
     <section ref={sectionRef} className={styles.section}>
       <div className={styles.titleContainer}>
-        <h2 className={styles.mainTitle}>Misi Kami</h2>
+        <h2 className={styles.mainTitle}>{t('misiTitle')}</h2>
         <div className={styles.separator}></div>
         <p className={styles.subtitle}>
-          Misi kami adalah untuk menjadi mitra keagenan kapal pilihan yang dapat melampaui harapan bagi klien domestik maupun internasional.
+          {t('misiDesc')}
         </p>
       </div>
       <div className={styles.gridContainer}>
@@ -73,8 +75,8 @@ const MisiSection: React.FC = () => {
           <div key={index} className="misi-card">
             <MisiCard
               icon={misi.icon}
-              title={misi.title}
-              description={misi.description}
+              title={t(misi.title)}
+              description={t(misi.description)}
             />
           </div>
         ))}

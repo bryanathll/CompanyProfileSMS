@@ -64,6 +64,7 @@ function App() {
     <>
       {/* <Navbar /> */}
       <main>
+        <Navbar />
         <HeroSection />
         <MisiSection />
         <AboutSection />

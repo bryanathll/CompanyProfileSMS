@@ -4,12 +4,14 @@ import React, { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'; // Impor ScrollTrigger
 import styles from './HeroSection.module.css';
+import { useTranslation } from 'react-i18next'
 
 import heroBgImage from '../assets/hero1.png'; 
 
 gsap.registerPlugin(ScrollTrigger); // Daftarkan plugin
 
 const HeroSection: React.FC = () => {
+  const { t } = useTranslation(); 
   const sectionRef = useRef<HTMLElement>(null);
 
   useLayoutEffect(() => {
@@ -69,13 +71,13 @@ const HeroSection: React.FC = () => {
       <div className={styles.contentContainer}>
         <h1 className={styles.mainTitle}>Samudera Maju Sejati</h1>
         <p className={styles.subtitle}>
-          Menjadi mitra terpercaya dan dapat diandalkan di setiap situasi untuk semua pelayaran di Indonesia
+          {t('hero_subtitle')}
         </p>
-        <button className={styles.ctaButton}>Kontak Kami</button>
+        <button className={styles.ctaButton}>{t('hero_button')}</button>
       </div>
 
       <div className={styles.addressContainer}>
-        <p>Ruko Kara Junction Blok B No.8 Batam Centre - Kepulauan Riau</p>
+        <p>{t('hero_address')}</p>
       </div>
     </section>
   );

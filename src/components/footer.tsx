@@ -3,12 +3,14 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import logoImage from '../assets/logoWhite.png'; // Sesuaikan path ke logo Anda
+import { useTranslation } from 'react-i18next';
 
 // Impor ikon dari react-icons
 import { FaWhatsapp } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation(); 
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -17,15 +19,15 @@ const Footer: React.FC = () => {
         <p className={styles.companyName}>PT SAMUDERA MAJU SEJATI</p>
 
         <nav className={styles.nav}>
-          <a href="#about">Tentang kami</a>
-          <a href="#vision">Visi/Misi</a>
-          <a href="#clients">Klien</a>
-          <a href="#services">Layanan</a>
-          <a href="#">Bahasa Indonesia (Bahasa Inggris)</a>
+          <a href="#about">{t('nav_about')}</a>
+          <a href="#vision">{t('nav_vision')}</a>
+          <a href="#clients">{t('nav_clients')}</a>
+          <a href="#services">{t('nav_services')}</a>
+          <a href="#">{t('footer_nav_lang')}</a>
         </nav>
 
         <p className={styles.caption}>
-          Kami mengundang anda untuk menghubungi kami, mendiskusikan kebutuhan spesifik anda dan mempelajari bagaimana PT. Samudra Maju Sejati dapat menjadi partner terpercaya untuk segala kebutuhan keagenan kapal anda.
+          {t('footer_caption')}
         </p>
 
         <div className={styles.contactInfo}>
@@ -48,7 +50,7 @@ const Footer: React.FC = () => {
           </p>
           <a href="https://wa.me/6285295112229" target="_blank" rel="noopener noreferrer" className={styles.footerContact}>
             <FaWhatsapp size={16} />
-            <span>Hubungi IT Support</span>
+            <span>{t('footer_contact')}</span>
           </a>
         </div>
       </div>

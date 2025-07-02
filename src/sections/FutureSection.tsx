@@ -4,6 +4,8 @@ import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './FutureSection.module.css';
+import { useTranslation } from 'react-i18next'
+
 
 // Sesuaikan dengan nama file gambar Anda
 import futureImageFile from '../assets/Mr.Jerry.png';
@@ -13,6 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
 const FutureSection: React.FC = () => {
     const sectionRef = useRef(null);
     const imageRef = useRef(null);
+    const { t } = useTranslation();
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -54,15 +57,15 @@ const FutureSection: React.FC = () => {
             <div className={styles.textColumn}>
                 <div className={styles.content}>
                     <h2 className={styles.title}>
-                        Melihat Kedepan
+                        {t('titleFuture')}
                     </h2>
 
                     <div className={styles.description}>
                         <p>
-                            PT. Samudra Maju Sejati berdedikasi pada perbaikan dan inovasi berkelanjutan, berupaya untuk tetap menjadi yang terdepan dalam industri keagenan kapal Indonesia.
+                            {t('descFuture1')}
                         </p>
                         <p>
-                            Kami berkomitmen untuk memainkan peran penting dalam memfasilitasi perdagangan global dan mendorong pertumbuhan sektor maritim di Indonesia
+                            {t('descFuture2')}
                         </p>
                     </div>
                 </div>

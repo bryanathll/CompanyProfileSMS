@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './ImageRevealSection.module.css';
+import { useTranslation } from 'react-i18next'
 
 // Sesuaikan nama file gambar Anda
 import revealImageFile from '../../assets/kapal2.png';
@@ -9,6 +10,7 @@ import revealImageFile from '../../assets/kapal2.png';
 gsap.registerPlugin(ScrollTrigger);
 
 const ImageRevealSection: React.FC = () => {
+  const { t } = useTranslation(); 
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -64,13 +66,13 @@ const ImageRevealSection: React.FC = () => {
       
       <div className={styles.textContainer1}>
         <h2 className={styles.quote}>
-          "Mitra Tepercaya untuk Operasional Kapal Anda"
+          {t('teks1')}
         </h2>
       </div>
       
       <div className={styles.textContainer2}>
         <h2 className={styles.quote2}>
-          "Dalam tekanan waktu dan kompleksitas pelabuhan, kami berdiri sebagai sistem yang menjaga semuanya tetap bergerak akurat, teratur, dan terkendali"
+          {t('teks2')}
         </h2>
       </div>
     </div>

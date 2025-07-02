@@ -5,6 +5,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, A11y } from 'swiper/modules';
+import { useTranslation } from 'react-i18next'
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -22,20 +23,22 @@ import imgLayananTambahan from '../assets/CardJasa/tanggapDarurat.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const jasaData = [
-  { title: 'Agen Pelabuhan', image: imgAgenPelabuhan, description: ' Kami menangani semua aspek prosedur kedatangan, izin, dan keberangkatan kapal, memastikan operasi pelabuhan lancar dan efisien.' },
-  { title: 'Agen Kapal', image: imgAgenKapal, description: ' Kami bertindak sebagai perwakilan lokal untuk perusahaan pelayaran kapal, mengelola dokumentasi kargo, bea cukai, dan penanganan kargo.' },
-  { title: 'Penanganan Kru', image: imgPenangananKru, description: 'Kami menyediakan layanan manajemen kru yang komprehensif, termasuk pengaturan visa, prosedur imigrasi, dan transportasi.' },
-  { title: 'Pasokan dan Perbekalan', image: imgPasokan, description: ' Kami secara efisien mengatur pengiriman perbekalan penting, perbekalan, dan suku cadang ke kapal.' },
-  { title: 'Pencairan dan Akuntansi', image: imgPencairan, description: ' Kami menangani semua aspek prosedur kedatangan, izin, dan keberangkatan kapal, memastikan operasi pelabuhan lancar dan efisien.' },
-  { title: 'Layanan Tambahan', image: imgLayananTambahan, description: ' Kami menangani semua aspek prosedur kedatangan, izin, dan keberangkatan kapal, memastikan operasi pelabuhan lancar dan efisien.' },
-];
 
 const JasaSection: React.FC = () => {
+  const { t } = useTranslation(); 
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
-  const titleLines = ["Jasa Yang", "Kami Tawarkan"];
+  const titleLines = [t("jasaTitle1"), t("jasaTitle2")];
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1024);
+
+  const jasaData = [
+  { title: t('JasaTitleCard1'), image: imgAgenPelabuhan, description: t('jasaDesc1') },
+  { title: t('JasaTitleCard2'), image: imgAgenKapal, description: t('jasaDesc2') },
+  { title: t('JasaTitleCard3'), image: imgPenangananKru, description: t('jasaDesc3') },
+  { title: t('JasaTitleCard4'), image: imgPasokan, description: t('jasaDesc4') },
+  { title: t('JasaTitleCard5'), image: imgPencairan, description: t('jasaDesc5') },
+  { title: t('JasaTitleCard6'), image: imgLayananTambahan, description: t('jasaDesc6') },
+];
   
   useEffect(() => {
     const handleResize = () => setIsDesktop(window.innerWidth > 1024);
@@ -137,7 +140,7 @@ const JasaSection: React.FC = () => {
           </span>
         </h2>
         <p ref={subtitleRef} className={styles.subtitle}>
-          Kami menyediakan berbagai layanan profesional yang dirancang untuk mendukung kelancaran aktivitas pelayaran dan operasional di pelabuhan.
+          {t('jasaDesc')}
         </p>
       </div>
       {isDesktop ? (
