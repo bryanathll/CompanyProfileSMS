@@ -138,6 +138,7 @@
 
   .cardTitle{
     font-size: 24px;
+    max-width: 280px;
   }
   /* Di sini, .gridContainer MASIH menggunakan 'repeat(3, 1fr)' dari atas, jadi tetap horizontal */
 }
@@ -170,6 +171,7 @@
     }
     .mainTitle{
       font-size:40px;
+      margin-bottom: 24px;
     }
     .subtitle{
       font-size: 14px;
@@ -196,6 +198,7 @@
     }
     .cardTitle {
         font-size: 24px;
+        max-width: 300px;
     }
     .cardDescription {
         font-size: 14px;
@@ -206,6 +209,7 @@
     }
     .mainTitle{
       font-size:36px;
+      margin-bottom: 24px;
     }
     .subtitle{
       font-size: 14px;
@@ -241,6 +245,7 @@
     }
     .mainTitle{
       font-size:34px;
+      margin-bottom: 22px;
     }
     .subtitle{
       font-size: 12px;
@@ -276,6 +281,7 @@
     }
     .mainTitle{
       font-size:32px;
+      margin-bottom: 20px;
     }
     .subtitle{
       font-size: 12px;
