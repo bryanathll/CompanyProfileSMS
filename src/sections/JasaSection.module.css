@@ -114,31 +114,6 @@
 /* ===== ENHANCED RESPONSIVE BREAKPOINTS ===== */
 
 
-
-
-/* Standard Desktop (1200px - 1399px) */
-@media (min-width: 1200px) and (max-width: 1399px) {
-  .section {
-    padding: 120px 0;
-  }
-  
-  .titleContainer {
-    padding: 0 80px;
-  }
-  
-  .mainTitle {
-    font-size: 40px;
-  }
-  
-  .desktopGrid {
-    padding: 0 80px;
-  }
-  
-  .swiperContainer {
-    padding: 0 80px 0 80px !important;
-  }
-}
-
 /* Large Tablet Landscape (1025px - 1199px) */
 @media (min-width: 1025px) and (max-width: 1199px) {
   .section {
@@ -284,40 +259,7 @@
 }
 
 /* Mobile Portrait (320px - 480px) - Sesuai dengan kode asli Anda */
-@media (max-width: 480px) {
-  .titleContainer,
-  .desktopGrid,
-  .paginationContainer {
-    padding: 0 30px;
-  }
-  
-  .swiperContainer {
-    padding: 0 0 0 30px !important;
-  }
-  
-  .swiperSlide {
-    height: auto;
-  }
-  
-  .mainTitle {
-    font-size: 36px;
-  }
 
-  .section {
-    padding: 80px 0;
-  }
-  
-  .titleContainer {
-    margin-bottom: 40px;
-  }
-  
-  .subtitle {
-    font-size: 12px;
-    line-height: 1.5;
-  }
-}
-
-/* Small Mobile (max-width: 320px) */
 @media (min-width: 320px) and (max-width: 480px) {
   .section {
     padding: 80px 0;
@@ -339,7 +281,11 @@
   
   .subtitle {
     font-size: 12px;
-    /* max-width: 280px; */
+    line-height: 1.5;
+  }
+
+  .titleContainer {
+    margin-bottom: 40px;
   }
 }
 
