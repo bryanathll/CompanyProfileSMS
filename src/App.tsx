@@ -38,45 +38,61 @@ function App() {
       lenis.raf(time * 1000);
     });
     gsap.ticker.lagSmoothing(0);
-    
-    // ▼▼▼ LOGIKA PRELOADER & ENTRY ANIMATION ▼▼▼
+
     const masterTimeline = gsap.timeline();
     
-    // 1. Buat #root terlihat, tapi tetap di belakang preloader.
-    //    Gunakan .set() karena ini adalah perubahan instan.
+
     gsap.set("#root", { visibility: 'visible' });
 
-    // 2. Animasikan preloader untuk menghilang (fade out).
-    //    Delay ini harus sinkron dengan delay di HeroSection Anda.
+
     masterTimeline.to("#preloader", {
       opacity: 0,
       duration: 1.5,
-      delay: 0.5, // Beri sedikit jeda sebelum fade out
+      delay: 0.5,
       onComplete: () => {
-        // Hapus preloader dari DOM setelah animasi selesai agar tidak mengganggu
         document.getElementById('preloader')?.remove();
       }
     });
 
   }, []);
 
+    useEffect(() => {
+    // KUNCI UTAMA: Gunakan setTimeout untuk memastikan perintah ini dijalankan paling akhir
+    const timer = setTimeout(() => {
+      // Selalu paksa scroll ke paling atas halaman
+      window.scrollTo(0, 0);
+
+      // Hapus hash dari URL jika ada
+      if (window.location.hash) {
+        window.history.replaceState(null, '', window.location.pathname);
+      }
+    }, 0); // Delay 0ms sudah cukup untuk mendorongnya ke akhir antrian
+
+    // Selalu set scroll restoration ke manual
+    if (window.history.scrollRestoration) {
+      window.history.scrollRestoration = 'manual';
+    }
+
+    // Cleanup timer saat komponen di-unmount
+    return () => clearTimeout(timer);
+    
+  }, []);
+
   return (
     <>
       {/* <Navbar /> */}
-      <main>
         <Navbar />
-        <HeroSection />
-        <MisiSection />
-        <AboutSection />
-        {/* <VisiSection /> */}
-        <ImageRevealSection />
-        {/* <SectionDivider /> */}
-        <JasaSection />
-        <FutureSection/>
-        <KeunggulanSection />
-        <ClientSection />
-        <ContactSection />
-        <Footer />
+      <main>
+        <section id="hero"><HeroSection /></section>
+        <section id="misi"><MisiSection /></section>
+        <section id="about"><AboutSection /></section>
+        <section id="imageReveal"><ImageRevealSection /></section>
+        <section id="jasa"><JasaSection /></section>
+        <section id="future"><FutureSection/></section>
+        <section id="keunggulan"><KeunggulanSection /></section>
+        <section id="client"><ClientSection /></section>
+        <section id="contact"><ContactSection /></section>
+        <section id="footer"><Footer /></section>
         {/* Section Lainnya */}
       </main>
     </>

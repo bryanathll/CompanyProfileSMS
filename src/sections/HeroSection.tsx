@@ -73,7 +73,9 @@ const HeroSection: React.FC = () => {
         <p className={styles.subtitle}>
           {t('hero_subtitle')}
         </p>
-        <button className={styles.ctaButton}>{t('hero_button')}</button>
+        <a href="#contact" className={styles.ctaButton}>
+          {t('hero_button')}
+        </a>
       </div>
 
       <div className={styles.addressContainer}>

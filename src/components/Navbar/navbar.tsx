@@ -83,21 +83,21 @@ const Navbar: React.FC = () => {
       <div className={styles.container}>
         {/* Navigasi Desktop Kiri */}
         <nav className={styles.navLeft}>
-          <a href="#">{t('nav_about')}</a>
-          <a href="#">{t('nav_vision')}</a>
+          <a href="#about">{t('nav_about')}</a>
+          <a href="#misi">{t('nav_vision')}</a>
         </nav>
 
         {/* Logo Tengah */}
         <div className={styles.navCenter}>
-          <a href="#" aria-label="Home">
+          <a href="#hero" aria-label="Home">
             <img src={logoImage} alt="Logo Perusahaan" className={styles.logo} />
           </a>
         </div>
         
         {/* Navigasi Desktop Kanan */}
         <div className={styles.navRight}>
-          <a href="#">{t('nav_services')}</a>
-          <a href="#">{t('nav_clients')}</a>
+          <a href="#jasa">{t('nav_services')}</a>
+          <a href="#client">{t('nav_clients')}</a>
           <button onClick={toggleLanguage} className={styles.langButton}>
             {t('lang_button')}
           </button>
@@ -113,10 +113,10 @@ const Navbar: React.FC = () => {
         {/* Menu Mobile yang Muncul */}
         <div className={styles.mobileMenu}>
           <nav className={styles.mobileNavLinks}>
-            <a href="#" onClick={toggleMenu}>{t('nav_about')}</a>
-            <a href="#" onClick={toggleMenu}>{t('nav_vision')}</a>
-            <a href="#" onClick={toggleMenu}>{t('nav_services')}</a>
-            <a href="#" onClick={toggleMenu}>{t('nav_clients')}</a>
+            <a href="#about" onClick={toggleMenu}>{t('nav_about')}</a>
+            <a href="#misi" onClick={toggleMenu}>{t('nav_vision')}</a>
+            <a href="#jasa" onClick={toggleMenu}>{t('nav_services')}</a>
+            <a href="#client" onClick={toggleMenu}>{t('nav_clients')}</a>
             <button onClick={toggleLanguage} className={styles.mobileLangButton}>
               {t('lang_button')}
             </button>
