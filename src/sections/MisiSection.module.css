@@ -51,7 +51,7 @@
 /* Standard Desktop & Large Tablet (992px - 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
   .section {
-    padding: 120px 80px;
+    padding: 120px 10 0px;
   }
   
   .titleContainer {
@@ -60,7 +60,7 @@
   }
   
   .mainTitle {
-    font-size: 40px;
+    font-size: 44px;
   }
   
   .separator {
@@ -73,7 +73,7 @@
 /* Medium Tablet Landscape (768px - 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
   .section {
-    padding: 100px 30px;
+    padding: 100px 60px;
   }
   
   .titleContainer {
@@ -82,18 +82,24 @@
   }
   
   .mainTitle {
-    font-size: 36px;
-  }
-  
-  .separator {
-    width: 90px;
-    height: 4px;
+    font-size: 40px;
   }
   
   .gridContainer {
     grid-template-columns: 1fr;
     gap: 2rem;
     max-width: 600px;
+  }
+
+  .separator {
+    width: 90px;
+    background-color: #2D3691;
+    margin: 1rem auto 1rem auto;
+    border-radius: 99px;
+  }
+  
+  .subtitle{
+    padding-top: 8px;
   }
 }
 
@@ -117,6 +123,10 @@
     height: 4px;
     margin: 1rem auto 1rem auto;
   }
+
+  .subtitle{
+    padding-top: 8px;
+  }
  
   .gridContainer {
     grid-template-columns: 1fr;
@@ -126,7 +136,7 @@
 }
 
 /* Small Mobile Screens (480px - 575px) */
-@media (min-width: 480px) and (max-width: 575px) {
+@media (min-width: 481px) and (max-width: 575px) {
   .section {
     padding: 80px 30px;
   }
@@ -137,18 +147,19 @@
   }
   
   .mainTitle {
-    font-size: 32px;
+    font-size: 34px;
   }
   
   .separator {
     width: 70px;
     height: 3px;
-    margin: 0.8rem auto 0.8rem auto;
+    margin: 0.8rem auto 1rem auto;
   }
   
   .subtitle {
     font-size: 14px;
     line-height: 1.5;
+    padding-top: 6px;
   }
   
   .gridContainer {
@@ -177,12 +188,12 @@
   .separator {
     width: 60px;
     height: 3px;
-    margin: 0.7rem auto;
+    margin: 0.7rem auto 1rem  auto;
   }
   
   .subtitle {
     font-size: 14px;
-    padding-top: 12px;
+    padding-top: 4px;
   }
   
   .gridContainer {
@@ -194,7 +205,7 @@
 /* Very Small Mobile Screens (Below 320px) */
 @media (max-width: 319px) {
   .section {
-    padding: 50px 16px;
+    padding: 60px 28px;
   }
   
   .titleContainer {
@@ -203,19 +214,19 @@
   }
   
   .mainTitle {
-    font-size: 36px;
+    font-size: 32px;
     line-height: 1.4;
   }
   
   .separator {
-    width: 50px;
-    height: 2px;
-    margin: 0.6rem auto 0.6rem auto;
+    width: 60px;
+    height: 3px;
+    margin: 0.7rem auto 1rem  auto;
   }
   
   .subtitle {
-    font-size: 12px;
-    line-height: 1.5;
+    font-size: 14px;
+    padding-top: 4px;
   }
   
   .gridContainer {

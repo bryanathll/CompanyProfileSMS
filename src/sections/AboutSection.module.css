@@ -26,11 +26,11 @@
 }
 
 .separator {
-  width: 100px;
-  height: 5px;
-  background-color: #2D3691;
-  margin: 1rem auto 1rem auto;
-  border-radius: 99px;
+    width: 100px;
+    height: 5px;
+    background-color: #2D3691;
+    margin: 1rem auto 1rem auto;
+    border-radius: 99px;
 }
 
 /* Kolom Kanan (Konten) */
@@ -57,13 +57,13 @@
 
 
 /* Standard Desktop (992px - 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 991px) and (max-width: 1199px) {
     .aboutSection {
         padding: 0 80px 80px 80px;
     }
     
     .title {
-        font-size: 40px;
+        font-size: 44px;
     }
     
     .separator {
@@ -78,23 +78,26 @@
 }
 
 /* Large Tablet Landscape (768px - 991px) */
-@media (min-width: 769px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
     .aboutSection {
-        padding: 0 30px 80px 30px;
+        padding: 0 60px 80px 60px;
     }
     
     .title {
-        font-size: 36px;
-        line-height: 1.25;
+        font-size: 40px;
+        line-height: 1.2;
     }
     
     .separator {
         width: 90px;
         height: 4px;
+        margin: 1rem auto 1rem auto;
+        border-radius: 99px;
     }
     
     .contentColumn {
         max-width: 650px;
+        padding-top: 8px;
     }
     
     .paragraph {
@@ -105,17 +108,22 @@
 }
 
 /* Tablet Portrait & Large Mobile (576px - 768px) */
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 576) and (max-width: 767px) {
     .aboutSection {
         flex-direction: column;
         min-height: auto;
-        padding: 0 80px 40px 80px;
+        padding: 0 30px 40px 30px;
     }
 
-    .titleColumn, .contentColumn {
+    .titleColumn {
         width: 100%;
         flex-basis: auto;
         padding-right: 0;
+    }
+    .contentColumn {
+        width: 100%;
+        flex-basis: auto;
+        padding-top: 8;
     }
 
     .title {
@@ -127,6 +135,7 @@
         width: 80px;
         height: 4px;
         margin: 1rem auto 1rem auto;
+        border-radius: 99px;
     }
 
     .paragraph {
@@ -138,32 +147,38 @@
 }
 
 /* Small Mobile Screens (480px - 575px) */
-@media (min-width: 480px) and (max-width: 575px) {
+@media (min-width: 481px) and (max-width: 599px) {
     .aboutSection {
         flex-direction: column;
         min-height: auto;
         padding: 0 30px 40px 30px;
     }
 
-    .titleColumn, .contentColumn {
+    .titleColumn {
         width: 100%;
         flex-basis: auto;
         padding-right: 0;
     }
 
+    .contentColumn {
+        width: 100%;
+        flex-basis: auto;
+        padding-top: 6;
+    }
+
     .title {
-        font-size: 36px;
+        font-size: 34px;
         line-height: 1.35;
     }
         
     .separator {
         width: 70px;
         height: 3px;
-        margin: 0.8rem auto 0.8rem auto;
+        margin: 0.8rem auto 1rem auto;
     }
         
     .paragraph {
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 500;
         line-height: 1.6;
         text-align: justify;
@@ -179,10 +194,15 @@
         align-items: center;
     }
 
-    .titleColumn, .contentColumn {
+    .titleColumn{
         width: 100%;
         flex-basis: auto;
         padding-right: 0;
+    }
+    .contentColumn {
+        width: 100%;
+        flex-basis: auto;
+        padding-top: 4px;
     }
 
     .title {
@@ -193,12 +213,7 @@
     .separator {
         width: 60px;
         height: 3px;
-        margin: 0.7rem auto;
-    }
-
-    .contentColumn {
-        padding-top: 28px;
-        /* max-width: 280px; */
+        margin: 0.7rem auto 1rem auto;
     }
     
     .paragraph {
@@ -214,24 +229,30 @@
     .aboutSection {
         flex-direction: column;
         min-height: auto;
-        padding: 0 30px 30px 30px;
+        padding: 0 30px 40px 30px;
     }
 
-    .titleColumn, .contentColumn {
+    .titleColumn {
         width: 100%;
         flex-basis: auto;
         padding-right: 0;
     }
 
+    .contentColumn {
+        width: 100%;
+        flex-basis: auto;
+        padding-top: 4px;
+    }
+
     .title {
-        font-size: 36px;
+        font-size: 32px;
         line-height: 1.45;
     }
     
     .separator {
         width: 50px;
         height: 2px;
-        margin: 0.6rem auto 0.6rem auto;
+        margin: 0.6rem auto 1rem auto;
     }
 
     .contentColumn {
@@ -240,7 +261,7 @@
     }
     
     .paragraph {
-        font-size: 11px;
+        font-size: 12px;
         font-weight: 500;
         line-height: 1.5;
         text-align: justify;

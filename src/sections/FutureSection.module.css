@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 60px;
+  gap: 56px;
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
@@ -43,8 +43,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 0;
-  padding-right: 100px;
+  padding-left: 0;  
 }
 
 .content {
@@ -57,7 +56,7 @@
   font-weight: 400;
   color: #1a1a1a;
   line-height: 1.3;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 28px 0;
 }
 
 .description {
@@ -80,39 +79,17 @@
 
 /* --- Media Queries untuk Responsive --- */
 
-/* Large Desktop (1200px+) */
-@media (min-width: 1200px) {
-  .section {
-    padding: 120px 100px;
-  }
-
-  .title {
-    font-size: 42px;
-  }
-
-  .description {
-    font-size: 15px;
-    max-width: 480px;
-  }
-
-  .textColumn {
-    padding-right: 100px;
-  }
-}
 
 /* Medium Desktop (993px - 1199px) */
-@media (max-width: 1199px) and (min-width: 993px) {
+@media (max-width: 1199px) and (min-width: 992px) {
   .section {
-    padding: 120px 80px;
-    gap: 3rem;
+    padding: 120px 100px;
+    gap: 56px;
   }
 
   .title {
-    font-size: 36px;
-  }
-
-  .textColumn {
-    padding-right: 40px;
+    font-size: 44px;
+    margin-bottom: 28px;
   }
 
   .description {
@@ -121,11 +98,11 @@
 }
 
 /* Tampilan Tablet (769px - 992px) - STACK VERTICAL */
-@media (max-width: 992px) and (min-width: 769px) {
+@media (max-width: 991px) and (min-width: 768px) {
   .section {
     grid-template-columns: 1fr;
     height: auto;
-    gap: 40px;
+    gap: 48px;
     padding: 100px 60px;
     min-height: auto;
     justify-items: center; /* CENTER GRID ITEMS */
@@ -135,7 +112,6 @@
     order: 1;
     width: 100%;
     max-width: 600px; /* BATASI LEBAR MAKSIMAL */
-    height: 60vh;
     min-height: 400px;
   }
 
@@ -159,8 +135,9 @@
   }
 
   .title {
-    font-size: 36px;
+    font-size: 40px;
     text-align: center;
+    margin-bottom: 24px;
   }
 
   .description {
@@ -174,7 +151,7 @@
   .section {
     grid-template-columns: 1fr;
     height: auto;
-    gap: 2rem;
+    gap: 44px;
     padding: 80px 30px 80px 30px;
     justify-items: center; /* CENTER GRID ITEMS */
   }
@@ -183,7 +160,6 @@
     order: 1;
     width: 100%;
     max-width: 500px; /* BATASI LEBAR MAKSIMAL */
-    height: 55vh;
     min-height: 350px;
   }
 
@@ -209,6 +185,7 @@
   .title {
     font-size: 36px;
     text-align: center;
+    margin-bottom: 22px;
   }
 
   .description {
@@ -223,7 +200,7 @@
   .section {
     grid-template-columns: 1fr;
     height: auto;
-    gap: 2rem;
+    gap: 44px;
     padding: 0 0 80px 0; /* HAPUS PADDING HORIZONTAL UNTUK GAMBAR FULL WIDTH */
     justify-items: center; /* CENTER GRID ITEMS */
   }
@@ -231,7 +208,6 @@
   .imageColumn {
     order: 1;
     width: 100vw; /* FULL WIDTH VIEWPORT */
-    height: 50vh;
     min-height: 300px;
     margin-left: calc(-50vw + 50%); /* TRICK UNTUK FULL WIDTH */
     border-radius: 0;
@@ -249,7 +225,6 @@
     flex-direction: column;
     align-items: center; /* CENTER HORIZONTAL */
     justify-content: center; /* CENTER VERTICAL */
-    padding: 0 30px; /* PADDING HANYA UNTUK TEKS */
     text-align: center;
   }
 
@@ -264,7 +239,7 @@
   .title {
     font-size: 32px;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 22px;
   }
 
   .description {
@@ -277,12 +252,11 @@
 /* Mobile Small (sampai 375px) */
 @media (max-width: 375px) {
   .section {
-    gap: 2rem;
+    gap: 40px;
     padding-bottom: 80px;
   }
 
   .imageColumn {
-    height: 45vh;
     min-height: 280px;
   }
 
@@ -297,39 +271,11 @@
   .title {
     font-size: 32px;
     line-height: 1.2;
+    margin-bottom: 20px;
   }
 
   .description {
     font-size: 12px;
     line-height: 1.8;
-  }
-}
-
-/* Mobile Extra Small (sampai 320px) */
-@media (max-width: 320px) {
-  .section {
-    gap: 3.5rem;
-    padding-bottom: 40px;
-  }
-
-  .imageColumn {
-    height: 40vh;
-    min-height: 250px;
-  }
-
-  .textColumn {
-    padding: 0 20px;
-  }
-
-  .content {
-    max-width: 280px;
-  }
-
-  .title {
-    font-size: 24px;
-  }
-
-  .description {
-    font-size: 11px;
   }
 }

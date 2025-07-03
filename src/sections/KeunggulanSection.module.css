@@ -34,13 +34,13 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 44px;
   font-weight: 500;
-  margin: 0 0 1rem 0;
+  margin: 0 0 28px 0;
 }
 
 .subtitle {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  max-width: 500px;
+  max-width: 800px;
   margin: 0 auto;
   color: #E0E0E0;
 }
@@ -123,52 +123,34 @@
   will-change: transform, opacity;
 }
 
-/* --- TAHAP 1: Tampilan Tablet (<= 1024px) --- */
-@media (max-width: 1024px) {
-  .section {
-    background-image: none !important;
-    background-color: #282828;
-    padding: 0 0;
-  }
-  
-  .frame {
-    max-width: 100%;
-    margin: 0;
-    padding: 80px 0;
-  }
-  .cardTitle{
-    font-size: 24px;
-  }
-  /* Di sini, .gridContainer MASIH menggunakan 'repeat(3, 1fr)' dari atas, jadi tetap horizontal */
-}
+
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .frame{
     padding: 120px 0;
   }
-}
-
-@media (min-width: 992px) and (max-width: 1024px){
-  .frame{
-    padding: 120px 0;
-  }
   .mainTitle{
-    font-size: 40px;
+    font-size: 44px;
   }
   .subtitle{
     font-size: 14px;
   }
-}
 
+  .cardTitle{
+    font-size: 24px;
+  }
+  /* Di sini, .gridContainer MASIH menggunakan 'repeat(3, 1fr)' dari atas, jadi tetap horizontal */
+}
+  
 /* --- TAHAP 2: Tampilan Mobile (<= 767px) --- */
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
     .frame {
         padding: 100px 0 0 0;
     }
     /* BARU DI SINI kita ubah grid menjadi 1 kolom (vertikal) */
     .gridContainer {
       grid-template-columns: 1fr;
-      /* gap: 0; Dihilangkan agar rapat sesuai permintaan "berdempetan kebawah" */
+      gap: 0; 
     }
     /* Dan ubah bentuk kartu menjadi persegi panjang */
     .card {
@@ -176,23 +158,30 @@
     }
     .cardTitle {
         font-size: 24px;
+        max-width: 260px;
     }
     .cardDescription {
         font-size: 14px;
+        max-width: 500px;
     }
     .titleContainer{
       padding: 0 30px;
       margin-bottom: 40px;
     }
     .mainTitle{
-      font-size:36px;
+      font-size:40px;
     }
     .subtitle{
       font-size: 14px;
     }
+    .section {
+    background-image: none !important;
+    background-color: #282828;
+    padding: 0 0;
+  }
 }
 
-@media (min-width: 576px) and (max-width: 768px){
+@media (min-width: 576px) and (max-width: 767px){
    .frame {
         padding: 80px 0 0 0;
     }
@@ -221,9 +210,49 @@
     .subtitle{
       font-size: 14px;
     }
+    .section {
+      background-image: none !important;
+      background-color: #282828;
+      padding: 0 0;
+  }
 }
-@media (min-width: 320px) and (max-width: 576px){
+@media (min-width: 481px) and (max-width: 575px){
    .frame {
+        padding: 80px 0 0 0;
+    }
+    /* BARU DI SINI kita ubah grid menjadi 1 kolom (vertikal) */
+    .gridContainer {
+      grid-template-columns: 1fr;
+      /* gap: 0; Dihilangkan agar rapat sesuai permintaan "berdempetan kebawah" */
+    }
+    /* Dan ubah bentuk kartu menjadi persegi panjang */
+    .card {
+        height: 280px;
+    }
+    .cardTitle {
+        font-size: 20px;
+    }
+    .cardDescription {
+        font-size: 14px;
+    }
+    .titleContainer{
+      padding: 0 30px;
+      margin-bottom: 40px;
+    }
+    .mainTitle{
+      font-size:34px;
+    }
+    .subtitle{
+      font-size: 12px;
+    }
+    .section {
+      background-image: none !important;
+      background-color: #282828;
+      padding: 0 0;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px){
+      .frame {
         padding: 80px 0 0 0;
     }
     /* BARU DI SINI kita ubah grid menjadi 1 kolom (vertikal) */
@@ -249,6 +278,11 @@
       font-size:32px;
     }
     .subtitle{
-      font-size: 14px;
+      font-size: 12px;
     }
+    .section {
+      background-image: none !important;
+      background-color: #282828;
+      padding: 0 0;
+  }
 }

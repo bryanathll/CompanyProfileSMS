@@ -22,7 +22,7 @@
 
 .mainTitle {
   font-family: 'Montserrat', serif;
-  font-size: 40px;
+  font-size: 44px;
   line-height: 1.3;
   margin: 0 0 40px 0;
   font-weight: 500;
@@ -165,55 +165,20 @@
   border-color: #2D3691;
 }
 
-/* --- Media Queries --- */
-
-@media (max-width: 767px) {
-  .section {
-    padding: 100px 30px;
-  }
-  .mainTitle {
-    font-size: 32px;
-  }
-  .contactDetails{
-    gap: 20px;
-  }
-  .socialIcons{
-    margin-top: 60px;
-  }
-  .infoText{
-    font-size: 14px;
-  }
-  .description{
-    font-size: 14px;
-  }
-  .inputField,
-  .textareaField{
-    font-size: 14px;
-  }
-  .submitButton{
-    font-size: 14px;
-    padding: 0.5rem 1rem;
-  }
-  .section{
-    padding: 80px 30px 160px 30px;
-  }
-}
-
 /* --- Media Queries*/
 /* Laptop (Large) */
 @media (min-width: 992px) and (max-width: 1199px) {
 
   .section {
-    padding: 100px 80px 2000px 80px;
+    padding: 100px 80px 200px 80px;
   }
 
   .gridContainer {
     gap: 4rem; /* Kurangi jarak antar kolom */
   }
   .mainTitle {
-    font-size: 40px; /* Sedikit perkecil judul */
+    font-size: 44px; /* Sedikit perkecil judul */
   }
-
 }
 
 /* Tablet & Laptop (Small) */
@@ -228,7 +193,8 @@
   }
 
   .mainTitle {
-    font-size: 36px;
+    font-size: 40px;
+    max-width: 600px;
   }
 
   .socialIcons {
@@ -237,10 +203,10 @@
 
 }
 /* Tablet (Small) & Ponsel (Large) */
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 767px) {
 
   .section {
-    padding: 40px 30px 120px 30px;
+    padding: 20px 30px 100px 30px;
   }
 
   .gridContainer {
@@ -253,15 +219,23 @@
   }
 
   .socialIcons {
-    margin-top: 50px;
+    margin-top: 40px;
+  }
+    .contactDetails{
+    gap: 20px;
+  }
+
+  .submitButton{
+    font-size: 14px;
+    padding: 0.5rem 1rem;
   }
 
 }
 /* Ponsel (Standard) */
-@media (min-width: 480px) and (max-width: 575px) {
+@media (min-width: 481px) and (max-width: 575px) {
 
   .section {
-    padding: 40px 30px 120px 30px;
+    padding: 20px 30px 100px 30px;
   }
 
   .gridContainer {
@@ -270,7 +244,7 @@
   }
 
   .mainTitle {
-    font-size: 36px;
+    font-size: 34px;
     margin-bottom: 30px;
   }
 
@@ -292,7 +266,7 @@
 @media (min-width: 320px) and (max-width: 480px) {
 
   .section {
-    padding: 20px 30px 120px 30px;
+    padding: 20px 30px 100px 30px;
   }
 
   .gridContainer {

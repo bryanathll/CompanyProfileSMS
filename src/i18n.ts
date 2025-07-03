@@ -57,8 +57,8 @@ const resources = {
     teks2:'Amid the time pressures and complexities of port activities, we stand as the system that keeps everything moving with precision, order, and control.',
 
     // JasaSection{
-    jasaTitle1:'Professional',
-    jasaTitle2:'Maritime Solutions',
+    jasaTitle1:'What',
+    jasaTitle2:'We Offer',
     jasaDesc:'We offer a range of professional services designed to support smooth sailing operations and efficient port activities',
 
     JasaTitleCard1:'Port Agency',

@@ -1,5 +1,4 @@
 // src/components/Footer/Footer.tsx
-
 import React from 'react';
 import styles from './Footer.module.css';
 import logoImage from '../assets/logoWhite.png'; // Sesuaikan path ke logo Anda
@@ -31,11 +30,11 @@ const Footer: React.FC = () => {
         </p>
 
         <div className={styles.contactInfo}>
-          <a href="https://wa.me/6285295112229" target="_blank" rel="noopener noreferrer" className={styles.contactItem}>
+          <a className={styles.contactItem}>
             <FaWhatsapp size={20} />
             <span>0852 9511 2229</span>
           </a>
-          <a href="mailto:info.smsshipping@gmail.com" className={styles.contactItem}>
+          <a  className={styles.contactItem}>
             <IoMdMail size={20} />
             <span>info.smsshipping@gmail.com</span>
           </a>
@@ -48,7 +47,7 @@ const Footer: React.FC = () => {
           <p className={styles.copyright}>
             © 2025 Samudera Maju Sejati
           </p>
-          <a href="https://wa.me/6285295112229" target="_blank" rel="noopener noreferrer" className={styles.footerContact}>
+          <a href="https://wa.me/+6285266112229" target="_blank" rel="noopener noreferrer" className={styles.footerContact}>
             <FaWhatsapp size={16} />
             <span>{t('footer_contact')}</span>
           </a>
