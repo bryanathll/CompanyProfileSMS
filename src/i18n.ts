@@ -84,20 +84,37 @@ const resources = {
 
 
     // keunggulanSection{
-    titleKeunggulan:'',
-    descKeunggulan:'',
+    titleKeunggulan1:'Competitive',
+    titleKeunggulan2:'Advantages',
+    descKeunggulan:'We distinguish ourselves through key strengths that form the foundation of our approach, delivering added value in every collaboration we undertake.',
 
     // card
-    titleKeunggulan1:'',
-    titleKeunggulan2:'',
-    titleKeunggulan3:'',
+    titleKeunggulanCard1:'Client-Centered Approach',
+    titleKeunggulanCard2:'Extensive Partnership Network',
+    titleKeunggulanCard3:'Technology-Driven Solutions',
     
     // desc
-    descKeunggulanCard1:'Kami mematuhi standar etika tertinggi dan berupaya membangun kepercayaan melalui transparansi dan komunikasi terbuka.',
-    descKeunggulanCard2:'Jaringan kemitraan kami yang mapan dan kontrak lokal yang dapat diandalkan memungkinkan kami merampingkan logistik.',
-    descKeunggulanCard3:'Kami memanfaatkan teknologi untuk mengoptimalkan proses dalam memberikan informasi kepada klien kami.',
-
+    descKeunggulanCard1:'We uphold the highest ethical standards and strive to build trust through transparency and open communication.',
+    descKeunggulanCard2:'Our established partnerships and reliable local contracts enable us to streamline logistics efficiently.',
+    descKeunggulanCard3:'We leverage technology to optimize processes and deliver timely, accurate information to our clients.',
     // }
+
+    // ClientSection
+    clientTitle: 'Trusted Across the Maritime Industry',
+    clientDesc: 'We take pride in being a trusted partner to many companies that continue to grow with us. Our collaborations go beyond service—they are about building long-term, mutually empowering relationships.',
+
+    // contactSection
+    contactTitle:'Contact Us If You Have Any Questions:',
+    workingHoursTitle:'Working Hours',
+    workingHours:'Monday to Friday, 08:30 AM – 5:00 PM',
+    contact_address:'Ruko Kara Junction Blok B No.8 Batam Centre - Riau Islands',
+    contactDesc:'Our team is ready to assist you with personalized solutions and prompt responses. If you have any questions about our services, we’re just a message or a phone call away!',
+    contactName: 'Name *',
+    contactEmail: 'Email *',
+    contactPhoneNumber: 'Phone Number ',
+    contactSubject: 'Subject',
+    contactMessage: 'Message ',
+    contactButton: 'Submit Message',
     }
   },
   id: {
@@ -192,8 +209,24 @@ const resources = {
     descKeunggulanCard1:'Kami mematuhi standar etika tertinggi dan berupaya membangun kepercayaan melalui transparansi dan komunikasi terbuka.',
     descKeunggulanCard2:'Jaringan kemitraan kami yang mapan dan kontrak lokal yang dapat diandalkan memungkinkan kami merampingkan logistik.',
     descKeunggulanCard3:'Kami memanfaatkan teknologi untuk mengoptimalkan proses dalam memberikan informasi kepada klien kami.',
-
     // }
+
+    // ClientSection
+    clientTitle: 'Perusahaan yang Memilih Kami',
+    clientDesc: 'Kami bangga telah menjadi mitra bagi banyak perusahaan yang terus berkembang bersama kami. Kolaborasi yang terjalin bukan hanya soal layanan, tapi juga tentang membangun hubungan jangka panjang yang saling menguatkan.',
+
+    // contactSection
+    contactTitle:'Hubungi kami jika anda mempunyai pertanyaan:',
+    workingHoursTitle:'Jam Kerja',
+    workingHours:'Senin sampai Jumat 08:30  – 17:00 WIB.',
+    contact_address:'Ruko Kara Junction Blok B No.8 Batam Centre - Kepulauan Riau',
+    contactDesc:'Tim kami siap membantu Anda dengan solusi yang dipersonalisasi dan tanggapan yang cepat. Jika Anda memiliki pertanyaan tentang layanan kami, kami hanya berjarak satu pesan atau telepon saja!',
+    contactName: 'Nama *',
+    contactEmail: 'Email *',
+    contactPhoneNumber: 'Nomor Telepon ',
+    contactSubject: 'Subjek ',
+    contactMessage: 'Pesan ',
+    contactButton: 'Kirim Pesan',
     }
   }
 };

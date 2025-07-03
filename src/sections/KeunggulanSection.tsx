@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './KeunggulanSection.module.css';
+import { useTranslation } from 'react-i18next'
 
 // Impor gambar Anda di sini
 import bgImage from '../assets/kapal1.png';
@@ -13,37 +14,39 @@ import cardImg3 from '../assets/tech.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const keunggulanData = [
-  {
-    image: cardImg1,
-    title: 'Pendekatan yang berpusat pada klien',
-    description: 'Kami mematuhi standar etika tertinggi dan berupaya membangun kepercayaan melalui transparansi dan komunikasi terbuka.',
-  },
-  {
-    image: cardImg2,
-    title: 'Jaringan Kemitraan yang Luas',
-    description: 'Jaringan kemitraan kami yang mapan dan kontrak lokal yang dapat diandalkan memungkinkan kami merampingkan logistik.',
-  },
-  {
-    image: cardImg3,
-    title: 'Solusi Berbasis Teknologi',
-    description: 'Kami memanfaatkan teknologi untuk mengoptimalkan proses dalam memberikan informasi kepada klien kami.',
-  },
-];
-
 const KeunggulanSection: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
+  const { t } = useTranslation();
   
   // Ubah title menjadi 2 baris
-  const titleLines = ["Keunggulan", "Kompetitif"];
+  const titleLines = [t('titleKeunggulan1'), t('titleKeunggulan2')];
+
+  const keunggulanData = [
+        {
+          image: cardImg1,
+          title: t('titleKeunggulanCard1'),
+          description: t('descKeunggulanCard1'),
+        },
+        {
+          image: cardImg2,
+          title: t('titleKeunggulanCard2'),
+          description: t('descKeunggulanCard1'),
+        },
+        {
+          image: cardImg3,
+          title: t('titleKeunggulanCard3'),
+          description: t('descKeunggulanCard1'),
+        },
+      ];
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Ambil semua karakter dari baris pertama dan kedua
       const line1Chars = titleRef.current?.querySelectorAll('.line-1');
       const line2Chars = titleRef.current?.querySelectorAll('.line-2');
-      
+
+
       if (!line1Chars || !line2Chars) {
         console.error('Karakter tidak ditemukan');
         return;
@@ -143,7 +146,7 @@ const KeunggulanSection: React.FC = () => {
             </span>
           </h2>
           <p ref={subtitleRef} className={styles.subtitle}>
-            Kami membedakan diri melalui beberapa kekuatan utama
+            {t('descKeunggulan')}
           </p>
         </div>
 

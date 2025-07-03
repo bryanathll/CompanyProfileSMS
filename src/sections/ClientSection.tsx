@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './ClientSection.module.css';
+import { useTranslation } from 'react-i18next'
 
 // --- LANGKAH 1: Impor semua logo Anda di sini ---
 // Ganti nama file dan path sesuai dengan file Anda di src/assets/logos/
@@ -55,6 +56,7 @@ const clientsData = [
 
 const ClientSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -75,7 +77,10 @@ const ClientSection: React.FC = () => {
 
   return (
     <section ref={sectionRef} className={styles.section}>
-      <h2 className={styles.title}>Existing Customer</h2>
+      <h2 className={styles.title}>{t('clientTitle')}</h2>
+      <p  className={styles.subtitle}>
+        {t('clientDesc')}
+      </p>
       <div className={styles.logoGrid}>
         {/* LANGKAH 3: Render data klien secara dinamis */}
         {clientsData.map((client, index) => (
