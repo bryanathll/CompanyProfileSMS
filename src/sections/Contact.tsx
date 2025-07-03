@@ -3,14 +3,18 @@
 import React, { useState } from 'react';
 import styles from './Contact.module.css';
 import { useTranslation } from 'react-i18next'
+import { toast } from 'react-toastify';
+import emailjs from '@emailjs/browser';
 
-// Impor ikon dari react-icons
+// Import ikon dari react-icons
 import { IoLocationSharp, IoCall, IoMail } from 'react-icons/io5';
 import { FaFacebookF, FaInstagram, FaLinkedinIn} from 'react-icons/fa';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 
 const ContactSection: React.FC = () => {
   const { t } = useTranslation();
+  const [isLoading, setIsLoading] = useState(false);
+  
   // State untuk mengelola setiap input form
   const [formData, setFormData] = useState({
     name: '',
@@ -30,15 +34,48 @@ const ContactSection: React.FC = () => {
   };
 
   // Fungsi untuk menangani pengiriman form
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Di dunia nyata, di sini Anda akan mengirim data (formData) ke backend atau layanan email
-    console.log('Form data submitted:', formData);
-    alert('Pesan telah dikirim! (Cek console log)');
-    // Reset form setelah submit
-    setFormData({ name: '', email: '', contactNumber: '', subject: '', message: '' });
-  };
+    setIsLoading(true);
 
+    try {
+      // Konfigurasi EmailJS
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+
+      // Template parameters yang akan dikirim ke email
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.contactNumber,
+        subject: formData.subject,
+        message: formData.message,
+        to_name: 'IT Department Indoproff', // Nama penerima
+      };
+
+      // Mengirim email menggunakan EmailJS
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      toast.success('Pesan berhasil dikirim!');
+      toast.error('Terjadi kesalahan saat mengirim pesan.');
+      
+      // Reset form setelah berhasil
+      setFormData({ 
+        name: '', 
+        email: '', 
+        contactNumber: '', 
+        subject: '', 
+        message: '' 
+      });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Terjadi kesalahan saat mengirim pesan. Silakan coba lagi.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <section className={styles.section}>
@@ -82,22 +119,74 @@ const ContactSection: React.FC = () => {
 
           <form onSubmit={handleSubmit} className={styles.contactForm}>
             <div className={styles.formGroup}>
-              <input type="text" id="name" name="name" value={formData.name} onChange={handleInputChange} placeholder={t('contactName')} required className={styles.inputField} />
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                value={formData.name} 
+                onChange={handleInputChange} 
+                placeholder={t('contactName')} 
+                required 
+                className={styles.inputField}
+                disabled={isLoading}
+              />
             </div>
             <div className={styles.formGroup}>
-              <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} placeholder={t('contactEmail')} required className={styles.inputField} />
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                value={formData.email} 
+                onChange={handleInputChange} 
+                placeholder={t('contactEmail')} 
+                required 
+                className={styles.inputField}
+                disabled={isLoading}
+              />
             </div>
             <div className={styles.formGroup}>
-              <input type="tel" id="contactNumber" name="contactNumber" value={formData.contactNumber} onChange={handleInputChange} placeholder={t('contactPhoneNumber')} required className={styles.inputField} />
+              <input 
+                type="tel" 
+                id="contactNumber" 
+                name="contactNumber" 
+                value={formData.contactNumber} 
+                onChange={handleInputChange} 
+                placeholder={t('contactPhoneNumber')} 
+                required 
+                className={styles.inputField}
+                disabled={isLoading}
+              />
             </div>
             <div className={styles.formGroup}>
-              <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleInputChange} placeholder={t('contactSubject')} className={styles.inputField} />
+              <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                value={formData.subject} 
+                onChange={handleInputChange} 
+                placeholder={t('contactSubject')} 
+                className={styles.inputField}
+                disabled={isLoading}
+              />
             </div>
             <div className={styles.formGroup}>
-              <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} placeholder={t('contactMessage')} rows={3} className={styles.textareaField}></textarea>
+              <textarea 
+                id="message" 
+                name="message" 
+                value={formData.message} 
+                onChange={handleInputChange} 
+                placeholder={t('contactMessage')} 
+                rows={3} 
+                className={styles.textareaField}
+                disabled={isLoading}
+              />
             </div>
-            <button type="submit" className={styles.submitButton}>
-              <span>{t('contactButton')}</span>
+            <button 
+              type="submit" 
+              className={styles.submitButton}
+              disabled={isLoading}
+            >
+              <span>{isLoading ? 'Mengirim...' : t('contactButton')}</span>
               <IoIosArrowRoundForward size={28} />
             </button>
           </form>
