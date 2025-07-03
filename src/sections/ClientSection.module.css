@@ -13,7 +13,17 @@
   font-size: 44px;
   color: #2D2C37;
   font-weight: 500;
-  margin: 0 0 60px 0; /* Jarak ke grid logo */
+  margin: 0 auto;
+  padding: 0 0 20px 0 ;
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #2D2C37;
+  margin: 0 auto 80px auto; /* Jarak ke grid logo */
 }
 
 .logoGrid {
