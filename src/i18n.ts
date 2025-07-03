@@ -3,10 +3,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import ImageRevealSection from './components/ImageReveal/ImageRevealSection';
-import JasaCard from './components/JasaCard/JasaCard';
-import FutureSection from './sections/FutureSection';
-
 // Di sini kita akan menaruh semua teks website kita
 const resources = {
   en: {
@@ -85,6 +81,23 @@ const resources = {
     titleFuture:'Sailing Into the Future',
     descFuture1:'PT. Samudra Maju Sejati is dedicated to continuous improvement and innovation, striving to remain at the forefront of Indonesia’s ship agency industry.',
     descFuture2:'We are committed to playing a vital role in facilitating global trade and driving the growth of the maritime sector in Indonesia.',
+
+
+    // keunggulanSection{
+    titleKeunggulan:'',
+    descKeunggulan:'',
+
+    // card
+    titleKeunggulan1:'',
+    titleKeunggulan2:'',
+    titleKeunggulan3:'',
+    
+    // desc
+    descKeunggulanCard1:'Kami mematuhi standar etika tertinggi dan berupaya membangun kepercayaan melalui transparansi dan komunikasi terbuka.',
+    descKeunggulanCard2:'Jaringan kemitraan kami yang mapan dan kontrak lokal yang dapat diandalkan memungkinkan kami merampingkan logistik.',
+    descKeunggulanCard3:'Kami memanfaatkan teknologi untuk mengoptimalkan proses dalam memberikan informasi kepada klien kami.',
+
+    // }
     }
   },
   id: {
@@ -163,6 +176,24 @@ const resources = {
     titleFuture:'Melihat Kedepan',
     descFuture1:'PT. Samudra Maju Sejati berdedikasi pada perbaikan dan inovasi berkelanjutan, berupaya untuk tetap menjadi yang terdepan dalam industri keagenan kapal Indonesia.',
     descFuture2:'Kami berkomitmen untuk memainkan peran penting dalam memfasilitasi perdagangan global dan mendorong pertumbuhan sektor maritim di Indonesia',
+
+    // keunggulanSection{
+
+    titleKeunggulan1:'Keunggulan',
+    titleKeunggulan2:'Kompetitif',
+    descKeunggulan:'Kami membedakan diri melalui beberapa kekuatan utama yang menjadi fondasi pendekatan kami dalam memberikan nilai lebih di setiap kolaborasi yang kami jalankan.',
+
+    // card
+    titleKeunggulanCard1:'Pendekatan yang berpusat pada klien',
+    titleKeunggulanCard2:'Jaringan Kemitraan yang Luas',
+    titleKeunggulanCard3:'Solusi Berbasis Teknologi',
+
+    // desc
+    descKeunggulanCard1:'Kami mematuhi standar etika tertinggi dan berupaya membangun kepercayaan melalui transparansi dan komunikasi terbuka.',
+    descKeunggulanCard2:'Jaringan kemitraan kami yang mapan dan kontrak lokal yang dapat diandalkan memungkinkan kami merampingkan logistik.',
+    descKeunggulanCard3:'Kami memanfaatkan teknologi untuk mengoptimalkan proses dalam memberikan informasi kepada klien kami.',
+
+    // }
     }
   }
 };
