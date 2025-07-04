@@ -1,6 +1,6 @@
 // src/App.tsx (VERSI DENGAN PRELOADER)
 
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Navbar from './components/Navbar/navbar';
 import HeroSection from './sections/HeroSection';
 import AboutSection from './sections/AboutSection';

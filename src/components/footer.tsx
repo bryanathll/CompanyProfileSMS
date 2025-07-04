@@ -19,10 +19,10 @@ const Footer: React.FC = () => {
 
         <nav className={styles.nav}>
           <a href="#about">{t('nav_about')}</a>
-          <a href="#vision">{t('nav_vision')}</a>
-          <a href="#clients">{t('nav_clients')}</a>
-          <a href="#services">{t('nav_services')}</a>
-          <a href="#">{t('footer_nav_lang')}</a>
+          <a href="#misi">{t('nav_vision')}</a>
+          <a href="#client">{t('nav_clients')}</a>
+          <a href="#jasa">{t('nav_services')}</a>
+          <a href="#hero">{t('footer_nav_lang')}</a>
         </nav>
 
         <p className={styles.caption}>

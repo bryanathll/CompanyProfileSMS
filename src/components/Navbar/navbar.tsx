@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Navbar.module.css';
 import logoImage from '../../assets/sms-logo.png';
-import { IoClose } from 'react-icons/io5';
 
 const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation();

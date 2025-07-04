@@ -9,7 +9,7 @@ const resources = {
     translation: {
       // Navbar
       nav_about: 'About Us',
-      nav_vision: 'Vision/Mission',
+      nav_vision: 'Our Mission',
       nav_services: 'Services',
       nav_clients: 'Clients',
       lang_button: 'Bahasa Indonesia',
@@ -121,7 +121,7 @@ const resources = {
     translation: {
       // Navbar
     nav_about: 'Tentang kami',
-    nav_vision: 'Visi/Misi',
+    nav_vision: 'Misi Kami',
     nav_services: 'Layanan',
     nav_clients: 'Klien',
     lang_button: 'English',
