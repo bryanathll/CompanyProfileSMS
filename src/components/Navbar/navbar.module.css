@@ -271,7 +271,19 @@
   }
 
   .mobileLangButton {
-    composes: langButton;
+    /* Replaced composes with direct styles */
+    background: #2D3691;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #FFFFFF;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    /* Additional mobile-specific styles */
     margin-top: 1.5rem;
     color: #fff;
     background-color: #2D3691;
@@ -353,7 +365,19 @@
   }
 
   .mobileLangButton {
-    composes: langButton;
+    /* Replaced composes with direct styles */
+    background: #2D3691;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #FFFFFF;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    /* Additional mobile-specific styles */
     margin-top: 1rem;
     color: #fff;
     background-color: #2D3691;
@@ -439,7 +463,19 @@
   }
 
   .mobileLangButton {
-    composes: langButton;
+    /* Replaced composes with direct styles */
+    background: #2D3691;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #FFFFFF;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    /* Additional mobile-specific styles */
     margin-top: 1rem;
     color: #fff;
     background-color: #2D3691;
@@ -491,7 +527,7 @@
     gap: 1.2rem;
   }
 
-    .hamburgerButton {
+  .hamburgerButton {
     width: 22px;
     height: 18px;
     right: 20px;
