@@ -137,7 +137,7 @@ const resources = {
     footer_caption: 'Kami mengundang anda untuk menghubungi kami, mendiskusikan kebutuhan spesifik anda dan mempelajari bagaimana PT. Samudra Maju Sejati dapat menjadi partner terpercaya untuk segala kebutuhan keagenan kapal anda.',
     footer_built_by: 'Dibangun oleh Departemen IT Indoproff',
     footer_copyright: '© 2025 Samudera Maju Sejati',
-    footer_contact: 'Hubungi IT Support',
+    footer_contact: 'Hubungi Kami',
 
     //About
     about_title1: 'Tentang',
