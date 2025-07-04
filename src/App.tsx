@@ -1,4 +1,4 @@
-// src/App.tsx (VERSI DENGAN PRELOADER)
+// src/App.tsx
 
 import { useEffect } from 'react';
 import Navbar from './components/Navbar/navbar';
@@ -13,87 +13,97 @@ import ClientSection from './sections/ClientSection';
 import ContactSection from './sections/Contact';
 import Footer from './components/footer';
 
-
 import Lenis from '@studio-freight/lenis';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+let globalLenis: Lenis | null = null;
+export function scrollToTarget(targetId: string) {
+  if (globalLenis) {
+    const el = document.getElementById(targetId);
+    if (el) {
+      globalLenis.scrollTo(el, {
+        offset: -50, // jika pakai sticky navbar
+        duration: 1.2,
+        easing: (t) => 1 - Math.pow(1 - t, 3), // custom ease out
+      });
+    }
+  }
+}
+
 function App() {
   useEffect(() => {
+  window.scrollTo(0, 0);
+  
+  if (window.location.hash) {
+    window.history.replaceState(null, '', window.location.pathname);
+  }
+    // Registrasi plugin
+    gsap.registerPlugin(ScrollTrigger);
 
+    // Konfigurasi ScrollTrigger
+    ScrollTrigger.config({ ignoreMobileResize: true });
+
+    // Set scroll manual & scroll ke atas saat load
     if (window.history.scrollRestoration) {
       window.history.scrollRestoration = 'manual';
     }
-    // 2. Sebagai jaminan, secara manual paksa scroll ke paling atas halaman.
-    window.scrollTo(0, 0);
-    // --- Setup Lenis Smooth Scroll ---
+    
+
+    // Init Lenis
     const lenis = new Lenis();
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-    lenis.on('scroll', ScrollTrigger.update);
+    globalLenis = lenis;
     gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
+      lenis.raf(time * 1000); // Gunakan hanya 1 raf dari GSAP
     });
+    lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.lagSmoothing(0);
 
-    const masterTimeline = gsap.timeline();
-    
+    // Delay animasi agar layout selesai
+    const animationDelay = setTimeout(() => {
+      gsap.set("#root", { visibility: 'visible' });
 
-    gsap.set("#root", { visibility: 'visible' });
+      const masterTimeline = gsap.timeline();
 
+        masterTimeline.to("#preloader", {
+          opacity: 0,
+          duration: 1.5,
+          delay: 0.5,
+          onComplete: () => {
+            document.getElementById('preloader')?.remove();
 
-    masterTimeline.to("#preloader", {
-      opacity: 0,
-      duration: 1.5,
-      delay: 0.5,
-      onComplete: () => {
-        document.getElementById('preloader')?.remove();
-      }
-    });
+            // Paksa update ScrollTrigger setelah Lenis siap
+            ScrollTrigger.refresh();
 
-  }, []);
+            // ✅ Trigger animasi Hero
+            window.dispatchEvent(new Event('start-hero-animation'));
+          }
+        });
+    }, 100); // Delay 100ms agar layout stabil
 
-    useEffect(() => {
-    // KUNCI UTAMA: Gunakan setTimeout untuk memastikan perintah ini dijalankan paling akhir
-    const timer = setTimeout(() => {
-      // Selalu paksa scroll ke paling atas halaman
-      window.scrollTo(0, 0);
-
-      // Hapus hash dari URL jika ada
-      if (window.location.hash) {
-        window.history.replaceState(null, '', window.location.pathname);
-      }
-    }, 0); // Delay 0ms sudah cukup untuk mendorongnya ke akhir antrian
-
-    // Selalu set scroll restoration ke manual
-    if (window.history.scrollRestoration) {
-      window.history.scrollRestoration = 'manual';
-    }
-
-    // Cleanup timer saat komponen di-unmount
-    return () => clearTimeout(timer);
-    
+    // Cleanup
+    return () => {
+      gsap.ticker.remove((time) => {
+        lenis.raf(time * 1000);
+      });
+      clearTimeout(animationDelay);
+    };
   }, []);
 
   return (
     <>
-      {/* <Navbar /> */}
-        <Navbar />
+      <Navbar />
       <main>
         <section id="hero"><HeroSection /></section>
         <section id="misi"><MisiSection /></section>
         <section id="about"><AboutSection /></section>
         <section id="imageReveal"><ImageRevealSection /></section>
         <section id="jasa"><JasaSection /></section>
-        <section id="future"><FutureSection/></section>
+        <section id="future"><FutureSection /></section>
         <section id="keunggulan"><KeunggulanSection /></section>
         <section id="client"><ClientSection /></section>
         <section id="contact"><ContactSection /></section>
         <section id="footer"><Footer /></section>
-        {/* Section Lainnya */}
       </main>
     </>
   );

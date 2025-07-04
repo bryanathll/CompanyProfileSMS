@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './footer.module.css';
 import logoImage from '../assets/logoWhite.png'; // Sesuaikan path ke logo Anda
 import { useTranslation } from 'react-i18next';
+import { scrollToTarget } from '../App';
 
 // Impor ikon dari react-icons
 import { FaWhatsapp } from 'react-icons/fa';
@@ -18,11 +19,11 @@ const Footer: React.FC = () => {
         <p className={styles.companyName}>PT SAMUDERA MAJU SEJATI</p>
 
         <nav className={styles.nav}>
-          <a href="#about">{t('nav_about')}</a>
-          <a href="#misi">{t('nav_vision')}</a>
-          <a href="#client">{t('nav_clients')}</a>
-          <a href="#jasa">{t('nav_services')}</a>
-          <a href="#hero">{t('footer_nav_lang')}</a>
+          <a href="#about" onClick={() => { scrollToTarget('about'); }}>{t('nav_about')}</a>
+          <a href="#misi" onClick={() => { scrollToTarget('misi'); }}>{t('nav_vision')}</a>
+          <a href="#jasa" onClick={() => { scrollToTarget('jasa'); }}>{t('nav_services')}</a>
+          <a href="#client" onClick={() => { scrollToTarget('client'); }}>{t('nav_clients')}</a>
+          <a href="#hero" onClick={() => { scrollToTarget('hero'); }}>{t('footer_nav_lang')}</a>
         </nav>
 
         <p className={styles.caption}>
