@@ -1,6 +1,6 @@
 // src/components/Footer/Footer.tsx
 import React from 'react';
-import styles from './footer.module.css';
+import styles from './Footer.module.css';
 import logoImage from '../assets/logoWhite.png'; // Sesuaikan path ke logo Anda
 import { useTranslation } from 'react-i18next';
 
