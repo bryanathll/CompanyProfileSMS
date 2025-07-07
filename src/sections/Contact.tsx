@@ -56,7 +56,7 @@ const ContactSection: React.FC = () => {
         phone: formData.contactNumber,
         subject: formData.subject,
         message: formData.message,
-        to_name: 'IT Department Indoproff', // Nama penerima
+        to_name: 'CS Samudera Sejati', // Nama penerima
         reply_to: formData.email, // Email untuk reply
       };
 
@@ -114,7 +114,7 @@ const ContactSection: React.FC = () => {
             </div>
             <div className={styles.contactItem}>
               <IoMail size={20} className={styles.icon} />
-              <p className={styles.infoText}>info.smsshipping@gmail.com</p>
+              <p className={styles.infoText}>cs@samudramajusejati.com</p>
             </div>
           </div>
 

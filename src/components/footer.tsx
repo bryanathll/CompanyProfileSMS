@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
           </a>
           <a  className={styles.contactItem}>
             <IoMdMail size={20} />
-            <span>info.smsshipping@gmail.com</span>
+            <span>cs@samudramajusejati.com</span>
           </a>
         </div>
 
