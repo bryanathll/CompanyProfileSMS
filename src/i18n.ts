@@ -66,7 +66,7 @@ const resources = {
     JasaTitleCard3:'Crew Handling',
     JasaTitleCard4:'Supply & Provisions',
     JasaTitleCard5:'Disbursement & Accounting',
-    JasaTitleCard6:'Value-Added Services',
+    JasaTitleCard6:'technology-based solutions',
 
     // jasaDesc
     jasaDesc1:'We handle all aspects of vessel arrival, clearance, and departure procedures, ensuring smooth and efficient port operations.',
@@ -178,7 +178,7 @@ const resources = {
     JasaTitleCard3:'Penanganan Kru',
     JasaTitleCard4:'Pasokan dan Perbekalan',
     JasaTitleCard5:'Pencairan dan Akuntansi',
-    JasaTitleCard6:'Layanan Tambahan',
+    JasaTitleCard6:'Solusi Berbasis Teknologi',
 
     // jasaDesc
     jasaDesc1:'Kami menangani semua aspek prosedur kedatangan, izin, dan keberangkatan kapal, memastikan operasi pelabuhan lancar dan efisien.',
