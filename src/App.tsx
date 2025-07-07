@@ -12,6 +12,8 @@ import FutureSection from './sections/FutureSection';
 import ClientSection from './sections/ClientSection';
 import ContactSection from './sections/Contact';
 import Footer from './components/footer';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Lenis from '@studio-freight/lenis';
 import { gsap } from 'gsap';
@@ -88,6 +90,7 @@ function App() {
       });
       clearTimeout(animationDelay);
     };
+    
   }, []);
 
   return (
@@ -105,6 +108,18 @@ function App() {
         <section id="contact"><ContactSection /></section>
         <section id="footer"><Footer /></section>
       </main>
+      
+      <ToastContainer 
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   );
 }

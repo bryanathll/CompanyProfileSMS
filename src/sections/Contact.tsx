@@ -44,6 +44,10 @@ const ContactSection: React.FC = () => {
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
       const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+      // Validasi konfigurasi EmailJS
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('Konfigurasi EmailJS tidak lengkap. Periksa environment variables.');
+      }
 
       // Template parameters yang akan dikirim ke email
       const templateParams = {
@@ -53,13 +57,16 @@ const ContactSection: React.FC = () => {
         subject: formData.subject,
         message: formData.message,
         to_name: 'IT Department Indoproff', // Nama penerima
+        reply_to: formData.email, // Email untuk reply
       };
 
       // Mengirim email menggunakan EmailJS
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      const result = await emailjs.send(serviceId, templateId, templateParams, publicKey);
       
+      console.log('Email sent successfully:', result);
+      
+      // Tampilkan toast success
       toast.success('Pesan berhasil dikirim!');
-      toast.error('Terjadi kesalahan saat mengirim pesan.');
       
       // Reset form setelah berhasil
       setFormData({ 
@@ -69,9 +76,16 @@ const ContactSection: React.FC = () => {
         subject: '', 
         message: '' 
       });
+      
     } catch (error) {
       console.error('Error sending email:', error);
-      alert('Terjadi kesalahan saat mengirim pesan. Silakan coba lagi.');
+      
+      // Tampilkan pesan error yang lebih spesifik
+      if (error instanceof Error) {
+        toast.error(`Gagal mengirim pesan: ${error.message}`);
+      } else {
+        toast.error('Terjadi kesalahan saat mengirim pesan. Silakan coba lagi.');
+      }
     } finally {
       setIsLoading(false);
     }
