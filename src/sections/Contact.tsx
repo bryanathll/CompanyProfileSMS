@@ -8,7 +8,7 @@ import emailjs from '@emailjs/browser';
 
 // Import ikon dari react-icons
 import { IoLocationSharp, IoCall, IoMail } from 'react-icons/io5';
-import { FaFacebookF, FaInstagram, FaLinkedinIn} from 'react-icons/fa';
+import { FaTiktok, FaInstagram, FaLinkedinIn} from 'react-icons/fa';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 
 const ContactSection: React.FC = () => {
@@ -119,8 +119,8 @@ const ContactSection: React.FC = () => {
           </div>
 
           <div className={styles.socialIcons}>
-            <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-            <a href="#" aria-label="Instagram"><FaInstagram /></a>
+            <a href="https://www.tiktok.com/@smsshipping.agency" aria-label="Tiktok"><FaTiktok /></a>
+            <a href="https://www.instagram.com/smsshipping.agency/" aria-label="Instagram"><FaInstagram /></a>
             <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
           </div>
         </div>
