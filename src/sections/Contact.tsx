@@ -128,7 +128,7 @@ const ContactSection: React.FC = () => {
         {/* Kolom Kanan */}
         <div className={styles.rightColumn}>
           <p className={styles.description}>
-            {t('clientDesc')}
+            {t('contactDesc')}
           </p>
 
           <form onSubmit={handleSubmit} className={styles.contactForm}>

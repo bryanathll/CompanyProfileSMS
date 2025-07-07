@@ -101,7 +101,7 @@ const resources = {
 
     // ClientSection
     clientTitle: 'Trusted Across the Maritime Industry',
-    clientDesc: 'We take pride in being a trusted partner to many companies that continue to grow with us. Our collaborations go beyond service—they are about building long-term, mutually empowering relationships.',
+    clientDesc: 'We are proud to have become a trusted partner to many companies that continue to grow alongside us. Our partnerships are not merely about services, but about building strong, long-term relationships that empower both sides.',
 
     // contactSection
     contactTitle:'Contact Us If You Have Any Questions:',
