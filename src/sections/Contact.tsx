@@ -98,10 +98,6 @@ const ContactSection: React.FC = () => {
         <div className={styles.leftColumn}>
           <h2 className={styles.mainTitle}>{t('contactTitle')}</h2>
           
-          <div className={styles.workingHours}>
-            <p className={styles.infoLabel}>{t('workingHoursTitle')}</p>
-            <p className={styles.infoText}>{t('workingHours')}</p>
-          </div>
 
           <div className={styles.contactDetails}>
             <div className={styles.contactItem}>
@@ -119,8 +115,8 @@ const ContactSection: React.FC = () => {
           </div>
 
           <div className={styles.socialIcons}>
-            <a href="https://www.tiktok.com/@smsshipping.agency" aria-label="Tiktok"><FaTiktok /></a>
-            <a href="https://www.instagram.com/smsshipping.agency/" aria-label="Instagram"><FaInstagram /></a>
+            <a href="https://www.tiktok.com/@smsshipping.agency" aria-label="Tiktok" target="_blank" rel="noopener noreferrer"><FaTiktok /></a>
+            <a href="https://www.instagram.com/smsshipping.agency/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
             <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
           </div>
         </div>

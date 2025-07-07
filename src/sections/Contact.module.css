@@ -24,7 +24,7 @@
   font-family: 'Montserrat', serif;
   font-size: 44px;
   line-height: 1.2;
-  margin: 0 0 40px 0;
+  margin: 0 0 60px 0;
   font-weight: 500;
 }
 
@@ -70,7 +70,7 @@
 .socialIcons {
   display: flex;
   gap: 1rem;
-  margin-top: auto; /* Mendorong ikon sosial ke bagian paling bawah */
+  margin-top: 60px; /* Mendorong ikon sosial ke bagian paling bawah */
   /* padding-top: 3rem; */
 }
 
@@ -219,7 +219,7 @@
   }
 
   .socialIcons {
-    margin-top: 40px;
+    margin-top: 60px;
   }
     .contactDetails{
     gap: 20px;
@@ -245,7 +245,7 @@
 
   .mainTitle {
     font-size: 34px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .contactDetails {
@@ -253,7 +253,7 @@
   }
 
   .socialIcons {
-    margin-top: 50px;
+    margin-top: 40px;
   }
 
   .infoText, .description, .inputField, .textareaField, .submitButton {
@@ -276,7 +276,7 @@
 
   .mainTitle {
     font-size: 32px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .contactDetails {
