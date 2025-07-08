@@ -61,7 +61,7 @@ const ContactSection: React.FC = () => {
       // };
 
       // Mengirim email menggunakan EmailJS
-      const result = await fetch('https://www.samudramajusejati.com/api/contact.php', {
+      const result = await fetch('https://samudramajusejati.com/api/contact.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
