@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import styles from './Contact.module.css';
 import { useTranslation } from 'react-i18next'
 import { toast } from 'react-toastify';
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 
 // Import ikon dari react-icons
 import { IoLocationSharp, IoCall, IoMail } from 'react-icons/io5';
@@ -50,18 +50,22 @@ const ContactSection: React.FC = () => {
       }
 
       // Template parameters yang akan dikirim ke email
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        phone: formData.contactNumber,
-        subject: formData.subject,
-        message: formData.message,
-        to_name: 'CS Samudera Sejati', // Nama penerima
-        reply_to: formData.email, // Email untuk reply
-      };
+      // const templateParams = {
+      //   from_name: formData.name,
+      //   from_email: formData.email,
+      //   phone: formData.contactNumber,
+      //   subject: formData.subject,
+      //   message: formData.message,
+      //   to_name: 'CS Samudera Sejati', // Nama penerima
+      //   reply_to: formData.email, // Email untuk reply
+      // };
 
       // Mengirim email menggunakan EmailJS
-      const result = await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      const result = await fetch('https://samudramajusejati.com/api/contact.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
       
       console.log('Email sent successfully:', result);
       
