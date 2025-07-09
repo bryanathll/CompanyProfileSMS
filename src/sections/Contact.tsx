@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import styles from './Contact.module.css';
 import { useTranslation } from 'react-i18next'
 import { toast } from 'react-toastify';
-// import emailjs from '@emailjs/browser';
 
 // Import ikon dari react-icons
 import { IoLocationSharp, IoCall, IoMail } from 'react-icons/io5';
@@ -39,47 +38,41 @@ const ContactSection: React.FC = () => {
     setIsLoading(true);
 
     try {
-      // Konfigurasi EmailJS
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-      // Validasi konfigurasi EmailJS
-      if (!serviceId || !templateId || !publicKey) {
-        throw new Error('Konfigurasi EmailJS tidak lengkap. Periksa environment variables.');
-      }
-
-      // Template parameters yang akan dikirim ke email
-      // const templateParams = {
-      //   from_name: formData.name,
-      //   from_email: formData.email,
-      //   phone: formData.contactNumber,
-      //   subject: formData.subject,
-      //   message: formData.message,
-      //   to_name: 'CS Samudera Sejati', // Nama penerima
-      //   reply_to: formData.email, // Email untuk reply
-      // };
-
-      // Mengirim email menggunakan EmailJS
+      // Mengirim email menggunakan fetch ke PHP endpoint
       const result = await fetch('https://www.samudramajusejati.com/api/contact.php', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
         body: JSON.stringify(formData),
       });
       
-      console.log('Email sent successfully:', result);
+      // Periksa apakah response berhasil
+      if (!result.ok) {
+        throw new Error(`HTTP error! status: ${result.status}`);
+      }
       
-      // Tampilkan toast success
-      toast.success('Pesan berhasil dikirim!');
+      // Parse response JSON
+      const responseData = await result.json();
       
-      // Reset form setelah berhasil
-      setFormData({ 
-        name: '', 
-        email: '', 
-        contactNumber: '', 
-        subject: '', 
-        message: '' 
-      });
+      console.log('Response from server:', responseData);
+      
+      // Periksa apakah pengiriman berhasil
+      if (responseData.success) {
+        toast.success('Pesan berhasil dikirim!');
+        
+        // Reset form setelah berhasil
+        setFormData({ 
+          name: '', 
+          email: '', 
+          contactNumber: '', 
+          subject: '', 
+          message: '' 
+        });
+      } else {
+        throw new Error(responseData.error || 'Pengiriman gagal');
+      }
       
     } catch (error) {
       console.error('Error sending email:', error);
