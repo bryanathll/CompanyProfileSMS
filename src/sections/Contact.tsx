@@ -39,14 +39,14 @@ const ContactSection: React.FC = () => {
 
     try {
       // Mengirim email menggunakan fetch ke PHP endpoint
-      const result = await fetch('https://samudramajusejati.com/contact.php', {
-        method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(formData),
-      });
+          const result = await fetch('https://samudramajusejati.com/contact.php', {
+            method: 'POST',
+            headers: { 
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData),
+          });
       
       // Periksa apakah response berhasil
       if (!result.ok) {
