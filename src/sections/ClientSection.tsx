@@ -32,6 +32,7 @@ import Asset23 from '../assets/LogoClient/Asset 23.png';
 import Asset24 from '../assets/LogoClient/Asset 24.png';
 import Asset25 from '../assets/LogoClient/Asset 25.png';
 import Asset26 from '../assets/LogoClient/Asset 26.png';
+import Asset27 from '../assets/LogoClient/Asset 27.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,6 +65,7 @@ const clientsData = [
   { logo: Asset24, name: 'PT. PERTAMA PACIFIC SHIPYARD' },
   { logo: Asset25, name: 'PT.TUNAS KARYA BAHARI INDONESIA' },
   { logo: Asset26, name: 'PT.SUMBER MARINE SHIPYARD' },
+  { logo: Asset27, name: 'PT. TIMAH TBK' },
 ];
 
 const ClientSection: React.FC = () => {
