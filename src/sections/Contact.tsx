@@ -50,10 +50,11 @@ const ContactSection: React.FC = () => {
       
       // Periksa apakah response berhasil
       if (!result.ok) {
-        throw new Error(`HTTP error! status: ${result.status}`);
+          const errorText = await result.text();
+          console.error('Server result:', errorText);
+          throw new Error(`HTTP error! status: ${result.status}`);
       }
-      
-      // Parse response JSON
+
       const responseData = await result.json();
       
       console.log('Response from server:', responseData);
