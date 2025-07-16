@@ -39,7 +39,7 @@ const ContactSection: React.FC = () => {
 
     try {
       // Mengirim email menggunakan fetch ke PHP endpoint
-          const result = await fetch('https://samudramajusejati.com/contact.php', {
+          const result = await fetch('https://www.samudramajusejati.com/contact.php', {
             method: 'POST',
             headers: { 
               'Content-Type': 'application/json',
