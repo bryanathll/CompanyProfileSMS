@@ -33,12 +33,25 @@ import Asset24 from '../assets/LogoClient/Asset 24.png';
 import Asset25 from '../assets/LogoClient/Asset 25.png';
 import Asset26 from '../assets/LogoClient/Asset 26.png';
 import Asset27 from '../assets/LogoClient/Asset 27.png';
+import Asset28 from '../assets/LogoClient/Asset 28.png';
+import Asset29 from '../assets/LogoClient/Asset 29.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
 // --- LANGKAH 2: Buat data untuk setiap klien ---
 // Isi array ini dengan semua klien Anda
 const clientsData = [
+  { logo: Asset27, name: 'PT. TIMAH TBK' },
+  { logo: Asset21, name: 'PT LIMS NAUTICAL SHIPYARD' },
+  { logo: Asset26, name: 'PT.SUMBER MARINE SHIPYARD' },
+  { logo: Asset23, name: 'SYNERGI KHALISTA YASA SHIPYARD' },
+  { logo: Asset24, name: 'PT. PERTAMA PACIFIC SHIPYARD' },
+  { logo: Asset25, name: 'PT.TUNAS KARYA BAHARI INDONESIA' },
+  { logo: Asset22, name: 'PT. DWIUTAMA MANDIRI SUKSES' },
+  { logo: Asset28, name: 'PT. FAJAR BARU LINES' },
+  { logo: Asset29, name: 'PT. KARYA BINTANG TIMUR' },
+  { logo: Asset12, name: 'PT PELNAS PASIFIK SAMUDERA SHIPPING' },
+  { logo: Asset8, name: 'PT SANDICO OCEAN LINES' },
   { logo: Asset1, name: 'PT MITRA TUJUH SAMUDRA' },
   { logo: Asset2, name: 'PT SINAR HALUAN SAMUDERA' },
   { logo: Asset3, name: 'PT INDAH KASIH ABADI' },
@@ -46,11 +59,9 @@ const clientsData = [
   { logo: Asset5, name: 'PT SUMBER SAMUDRA BIRU' },
   { logo: Asset6, name: 'PT Makmur Utama Armadalines' },
   { logo: Asset7, name: 'PT BINTAN SAMUDRA PACIFIC' },
-  { logo: Asset8, name: 'PT SANDICO OCEAN LINES' },
   { logo: Asset9, name: 'PT PELAYARAN NASIONAL BAHTERA ARMADA JAYA' },
   { logo: Asset10, name: 'PT PELAYARAN SINAR LAUTAN MUTIARA' },
   { logo: Asset11, name: 'PT WAHANA WIRATAMA LINE' },
-  { logo: Asset12, name: 'PT PELNAS PASIFIK SAMUDERA SHIPPING' },
   { logo: Asset13, name: 'PT KORSA CAKRA LAUTAN' },
   { logo: Asset14, name: 'PT ARGO MITRA SUKSES' },
   { logo: Asset15, name: 'PT SUPARAJA ARMADA SAMUDRA' },
@@ -59,13 +70,6 @@ const clientsData = [
   { logo: Asset18, name: 'PT SETIA KENCANA SAMUDRA' },
   { logo: Asset19, name: 'PT MAKMUR UTAMA ARMADALINES' },
   { logo: Asset20, name: 'PT KAPALINDO PERKASA' },
-  { logo: Asset21, name: 'PT LIMS NAUTICAL SHIPYARD' },
-  { logo: Asset22, name: 'PT. DWIUTAMA MANDIRI SUKSES' },
-  { logo: Asset23, name: 'SKY SHIPYARD' },
-  { logo: Asset24, name: 'PT. PERTAMA PACIFIC SHIPYARD' },
-  { logo: Asset25, name: 'PT.TUNAS KARYA BAHARI INDONESIA' },
-  { logo: Asset26, name: 'PT.SUMBER MARINE SHIPYARD' },
-  { logo: Asset27, name: 'PT. TIMAH TBK' },
 ];
 
 const ClientSection: React.FC = () => {
