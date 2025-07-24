@@ -35,6 +35,7 @@ import Asset26 from '../assets/LogoClient/Asset 26.png';
 import Asset27 from '../assets/LogoClient/Asset 27.png';
 import Asset28 from '../assets/LogoClient/Asset 28.png';
 import Asset29 from '../assets/LogoClient/Asset 29.png';
+import Asset30 from '../assets/LogoClient/Asset 30.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,6 +51,7 @@ const clientsData = [
   { logo: Asset22, name: 'PT. DWIUTAMA MANDIRI SUKSES' },
   { logo: Asset28, name: 'PT. FAJAR BARU LINES' },
   { logo: Asset29, name: 'PT. KARYA BINTANG TIMUR' },
+  { logo: Asset30, name: 'PT. PERTAMA LINTAS ABADI' },
   { logo: Asset12, name: 'PT PELNAS PASIFIK SAMUDERA SHIPPING' },
   { logo: Asset8, name: 'PT SANDICO OCEAN LINES' },
   { logo: Asset1, name: 'PT MITRA TUJUH SAMUDRA' },
