@@ -15,7 +15,7 @@ const resources = {
       lang_button: 'Bahasa Indonesia',
       
       // Hero Section
-      hero_title: 'Samudera Maju Sejati',
+      hero_title: 'Samudra Maju Sejati',
       hero_subtitle: 'Becoming a trusted and reliable partner in every situation for all shipping in Indonesia',
       hero_button: 'Contact Us',
       hero_address: 'Ruko Kara Junction Blok B No.8 Batam Centre - Riau Islands',
@@ -24,12 +24,12 @@ const resources = {
     footer_nav_lang: 'Indonesian (English)',
     footer_caption: 'We invite you to contact us, to discuss your specific needs and learn how PT. Samudra Maju Sejati can be a trusted partner for all your ship agency needs.',
     footer_built_by: 'Built by IT Department Indoproff',
-    footer_copyright: '© 2025 Samudera Maju Sejati',
+    footer_copyright: '© 2025 Samudra Maju Sejati',
     footer_contact: 'Contact Us',
 
     // about
     about_title1: 'About',
-    about_title2: 'Samudera Maju Sejati',
+    about_title2: 'Samudra Maju Sejati',
     Description1: 'PT. Samudra Maju Sejati is an Indonesian shipping agency company, established in 2024, built on the expertise of professionals who have been dedicated to the ship agency industry for over a decade. With a strong commitment to delivering the best and most reliable services, we strive to be a trusted partner in the maritime sector',
     Description2: 'Strategically headquartered in Batam, Indonesia, we ensure comprehensive coverage and efficient operations.',
 
@@ -127,7 +127,7 @@ const resources = {
     lang_button: 'English',
 
       // Hero Section
-    hero_title: 'Samudera Maju Sejati',
+    hero_title: 'Samudra Maju Sejati',
     hero_subtitle: 'Menjadi mitra terpercaya dan dapat diandalkan di setiap situasi untuk semua pelayaran di Indonesia',
     hero_button: 'Kontak Kami',
     hero_address: 'Ruko Kara Junction Blok B No.8 Batam Centre - Kepulauan Riau',
@@ -136,12 +136,12 @@ const resources = {
     footer_nav_lang: 'Bahasa Indonesia (Bahasa Inggris)',
     footer_caption: 'Kami mengundang anda untuk menghubungi kami, mendiskusikan kebutuhan spesifik anda dan mempelajari bagaimana PT. Samudra Maju Sejati dapat menjadi partner terpercaya untuk segala kebutuhan keagenan kapal anda.',
     footer_built_by: 'Dibangun oleh Departemen IT Indoproff',
-    footer_copyright: '© 2025 Samudera Maju Sejati',
+    footer_copyright: '© 2025 Samudra Maju Sejati',
     footer_contact: 'Hubungi Kami',
 
     //About
     about_title1: 'Tentang',
-    about_title2: 'Samudera Maju Sejati',
+    about_title2: 'Samudra Maju Sejati',
     Description1: 'PT. Samudra Maju Sejati  adalah  perusahaan keagenan kapal Indonesia,  didirikan pada 2024 dengan tenaga  profesional yang telah berdedikasi  dalam bidang keagenan kapal selama  belasan tahun serta komitmen untuk  memberikan layanan yang terbaik dan  dapat diandalkan klien di industri  maritim.',
     Description2: 'Strategically headquartered in Batam, Indonesia, we ensure comprehensive coverage and efficient operations.',
 

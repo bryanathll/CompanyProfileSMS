@@ -14,9 +14,9 @@ const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <img src={logoImage} alt="Logo Samudera Maju Sejati" className={styles.logo} />
+        <img src={logoImage} alt="Logo Samudra Maju Sejati" className={styles.logo} />
         
-        <p className={styles.companyName}>PT SAMUDERA MAJU SEJATI</p>
+        <p className={styles.companyName}>PT SAMUDRA MAJU SEJATI</p>
 
         <nav className={styles.nav}>
           <a href="#about" onClick={() => { scrollToTarget('about'); }}>{t('nav_about')}</a>
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
             Built by IT Department Indoproff
           </p>
           <p className={styles.copyright}>
-            © 2025 Samudera Maju Sejati
+            © 2025 Samudra Maju Sejati
           </p>
           <a href="https://wa.me/+6285266112229" target="_blank" rel="noopener noreferrer" className={styles.footerContact}>
             <FaWhatsapp size={16} />

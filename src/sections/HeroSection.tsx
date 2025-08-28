@@ -70,7 +70,7 @@
         <div className={styles.overlay}></div>
         
         <div className={styles.contentContainer}>
-          <h1 className={styles.mainTitle}>Samudera Maju Sejati</h1>
+          <h1 className={styles.mainTitle}>Samudra Maju Sejati</h1>
           <p className={styles.subtitle}>
             {t('hero_subtitle')}
           </p>
